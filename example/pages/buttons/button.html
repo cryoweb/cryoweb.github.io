@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="button.css">
+
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<p>Сброс стилей для <code>button</code></p>
+			<code>
+				<pre>
+.c-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: #ccc;
+  font-family: inherit;
+}
+				</pre>
+			</code>
+
+			<button>Submit</button>
+
+			<p>Простая кнопка</p>
+			<code><pre>
+.c-button {
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.c-button:hover {
+  background: #1d49aa;
+}
+
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+			</pre></code>
+
+			<button class="c-button">Submit</button>
+			<p><a href="https://ishadeed.com/article/styling-the-good-old-button/">Узнать больше здесь</a></p>
+		</main>
+	</div>
+</body>
+</html>

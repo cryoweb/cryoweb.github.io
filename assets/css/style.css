@@ -7,6 +7,7 @@ html {
 }
 
 body {
+	position: relative;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -61,6 +62,7 @@ input[type="radio"].v-h {
 }
 .header-box{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -72,7 +74,6 @@ input[type="radio"].v-h {
 	color: #3c8bff;
 }
 
-
 .nav a{
 	display: inline-block;
 	margin-right: 30px;
@@ -81,8 +82,36 @@ input[type="radio"].v-h {
 	text-decoration: none;
 	text-transform: uppercase; 
 }
+@media (min-width: 481px) {
+	.mobil-nav {
+		display: none;
+	}
+}
 
-
+@media (max-width: 480px){
+	.header-col .nav {
+		display: none;
+	}
+	.mobil-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+	}
+	.mobil-nav .nav {
+		margin-top: 50px;
+	}
+	.mobil-nav .nav a{
+		display: block;
+		margin-right: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}
 
 .footer{
 	padding: 20px 0;

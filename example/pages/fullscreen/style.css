@@ -1,0 +1,89 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-size: 20px;
+	color: #fff;
+	background-color: #333;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.fullscreen {
+	min-height: 100vh;
+	display: flex;
+	padding: 20px 10px;
+	background-color: #794;
+}
+.fullscreen-bg {
+	background: url('tropik.jpg') center / cover no-repeat fixed;
+}
+.fullscreen-2 {
+	background-color: #666;
+}
+.fullscreen__body {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	flex: 1 1 auto;
+}
+.fullscreen__title {
+	font-size: 42px;
+	margin-bottom: 20px;
+}
+.fullscreen__text {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+.fullscreen__link {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 30px;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	background-color: #3863d9;
+	align-self: center;
+}
+.content {
+	padding: 30px 10px;
+}
+.content__body {
+	max-width: 960px;
+	margin: 0 auto;
+}
+.content__body p {
+	margin-bottom: 20px;
+}
+.content__body p:last-child {
+	margin-bottom: 0;
+}
+.content__title {
+	margin-bottom: 20px;
+}
+.footer {
+	padding: 20px;
+	text-align: center;
+	background-color: #232323;
+}
+.footer__body {
+	max-width: 960px;
+	margin: 0 auto;
+}
