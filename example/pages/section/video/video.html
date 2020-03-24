@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="elagent/style.css">
+	<link rel="stylesheet" href="magnify-pop/magnific-popup.css">
+	<link rel="stylesheet" href="video.css">
+	<title>Document</title>
+</head>
+<body>
+	<section class="video sec_pad">
+		<div class="container">
+			<div class="sec_title text-center">
+				<h2 class="title">The SaasLand platform</h2>
+				<p class="descr">Samsa will only charge a fee if you make a profit</p>
+			</div>
+			<div class="video_content">
+				<div class="video_info">
+					<a class="popup-youtube video_icon" href="https://www.youtube.com/watch?v=sU3FkzUKHXU"><i class="arrow_triangle-right"></i></a>
+					<h2>SaasLand</h2>
+				</div>
+				<img class="video_leaf" src="img/leaf.png" alt="">
+				<img class="cup" src="img/cup.png" alt="">
+			</div>
+		</div>
+	</section>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="magnify-pop/jquery.magnific-popup.min.js"></script>
+<script>
+function popupGallery() {
+    if ($(".img_popup,.image-link").length) {
+        $(".img_popup,.image-link").each(function () {
+            $(".img_popup,.image-link").magnificPopup({
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                removalDelay: 300,
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image,
+                }
+            });
+        })
+    }
+    if ($('.popup-youtube').length) {
+        $('.popup-youtube').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+        });
+        $('.popup-youtube').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+    }
+}
+popupGallery();
+</script>	
+</body>
+</html>

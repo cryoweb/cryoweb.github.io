@@ -1,0 +1,254 @@
+html {
+	box-sizing: border-box;
+	-ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	background-color: #fff;
+	font: 400 15px/28px "Poppins", sans-serif;
+	letter-spacing: 0px;
+	color: #677294;
+	padding: 0px;
+	overflow-x: hidden;
+	z-index: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .5rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+	color: inherit;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+a, .btn, button {
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+}
+.text-center {
+	text-align: center;
+}
+
+.video {
+	position: relative;
+	background: #fbfbfd;
+	overflow-x: hidden;
+	z-index: 1;
+}
+.sec_pad {
+	padding: 120px 0px;
+}
+@media (max-width: 768px) {
+	.sec_pad {
+		padding: 70px 0px;
+	}
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (max-width: 767px) {
+	.container {
+		max-width: 100%;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1250px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+
+.sec_title {
+	margin-bottom: 70px;
+}
+@media (max-width: 768px){
+	.sec_title {
+		margin-bottom: 50px;
+	}
+}
+.title {
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 600;
+	color: #051441;
+}
+@media (max-width: 576px){
+	.title {
+		font-size: 24px;
+		line-height: 35px;
+	}
+}
+.descr {
+	margin-bottom: 0;
+	font-size: 16px;
+	font-weight: 400;  
+}
+
+.video_content {
+	position: relative;
+}
+@media (max-width: 991px){
+	.video_content {
+		padding: 0px 60px;
+	}
+}
+@media (max-width: 576px){
+	.video_content {
+		padding: 0px;
+	}
+}
+
+.video_info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	background: linear-gradient(50deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url(img/video_bg.jpg) no-repeat;
+	background-size: cover;
+	box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
+	height: 450px;
+	max-width: 770px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+@media (max-width: 991px){
+	.video_info {
+		height: 350px;
+		max-width: 100%;
+	}
+}
+
+.video_icon {
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0px 20px 40px 0px rgba(1, 16, 58, 0.14);
+	text-align: center;
+	line-height: 85px;
+	font-size: 30px;
+	transition: all 0.3s linear;
+}
+.video_icon:hover {
+	transform: scale(1.04);
+}
+.video_icon:before, .video_icon:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	border: 0.2px solid #fff;
+	border-radius: 50%;
+	opacity: 0.10;
+}
+.video_icon:before {
+	transform: scale(2.5);
+}
+.video_icon:after {
+	transform: scale(3.8);
+}
+
+.video_icon i {
+	position: relative;
+	color: #17c7bd;
+	text-shadow: 0px 6px 25px rgba(16, 147, 140, 0.9);
+}
+
+.video_icon i:after {
+	width: 300%;
+	height: 300%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+	box-shadow: 0px 1px 15px 1px rgba(255, 255, 255, 0.5);
+	content: "";
+	/*transform: scale(8);*/
+	animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(2);
+	}
+}
+
+.video_info h2 {
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 100px;
+	opacity: 0.10;
+	font-weight: 700;
+	z-index: -1;
+}
+
+.video_leaf {
+	position: absolute;
+	left: 85px;
+	top: -80px;
+	background: url(../img/new/leaf.png) no-repeat scroll;
+	z-index: -2;
+}
+@media (max-width: 991px){
+	.video_leaf {
+		left: 0;
+		top: -22px;
+	}
+}
+
+.cup {
+	position: absolute;
+	right: 98px;
+	bottom: 40px;
+}
+@media (max-width: 991px){
+	.cup {
+		right: -27px;
+	}
+}

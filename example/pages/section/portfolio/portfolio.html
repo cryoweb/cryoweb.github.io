@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="themify-icon/themify-icons.css">
+	<link rel="stylesheet" href="magnify-pop/magnific-popup.css">
+	<link rel="stylesheet" href="portfolio.css">
+	<title>Document</title>
+</head>
+<body>
+<section class="portfolio sec_pad">
+	<div class="container">
+		<div class="sec_title wow fadeInUp" data-wow-delay="0.4s">
+			<h2 class="title text-center">take a look around<br>our portfolio</h2>
+		</div>
+		<div id="portfolio_filter" class="portfolio_filter">
+			<div data-filter="*" class="portfolio_filter_item active">See All</div>
+			<div data-filter=".br" class="portfolio_filter_item">Branding</div>
+			<div data-filter=".web" class="portfolio_filter_item">Web Design</div>
+			<div data-filter=".fashion" class="portfolio_filter_item">Fashion</div>
+			<div data-filter=".ux" class="portfolio_filter_item">UI/UX</div>
+			<div data-filter=".product" class="portfolio_filter_item">Product</div>
+		</div>
+		<div class="row portfolio_gallery" id="work-portfolio">
+			<div class="col portfolio_item br ux">
+				<div class="portfolio_img">
+					<img src="img/1.jpg" alt="alt">
+					<div class="portfolio_img_hover">
+						<a href="img/1.jpg" class="img_popup"><i class="ti-plus"></i></a>
+						<div class="portfolio-description">
+								<h3 class="portfolio-title">
+									<a href="#">Apple Mobile Mockup</a>
+								</h3>
+							<div class="portfolio_links"><a href="#">Branding,</a><a href="#">Fashion</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col portfolio_item product ux">
+				<div class="portfolio_img">
+					<img src="img/3.jpg" alt="alt">
+					<div class="portfolio_img_hover">
+						<a href="img/3.jpg" class="img_popup"><i class="ti-plus"></i></a>
+						<div class="portfolio-description">
+								<h3 class="portfolio-title">
+									<a href="#">Apple Mobile Mockup</a>
+								</h3>
+							<div class="portfolio_links"><a href="#">Branding,</a><a href="#">Fashion</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col portfolio_item br ux">
+				<div class="portfolio_img">
+					<img src="img/6.jpg" alt="alt">
+					<div class="portfolio_img_hover">
+						<a href="img/6.jpg" class="img_popup"><i class="ti-plus"></i></a>
+						<div class="portfolio-description">
+								<h3 class="portfolio-title">
+									<a href="#">Double Exposure</a>
+								</h3>
+							<div class="portfolio_links"><a href="#">Branding,</a><a href="#">Fashion</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col portfolio_item ux web">
+				<div class="portfolio_img">
+					<img src="img/5.jpg" alt="alt">
+					<div class="portfolio_img_hover">
+						<a href="img/5.jpg" class="img_popup"><i class="ti-plus"></i></a>
+						<div class="portfolio-description">
+								<h3 class="portfolio-title">
+									<a href="#">Portfolio Masonry</a>
+								</h3>
+							<div class="portfolio_links"><a href="#">Branding,</a><a href="#">Fashion</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col portfolio_item product br">
+				<div class="portfolio_img">
+					<img src="img/4.jpg" alt="alt">
+					<div class="portfolio_img_hover">
+						<a href="img/4.jpg" class="img_popup"><i class="ti-plus"></i></a>
+						<div class="portfolio-description">
+								<h3 class="portfolio-title">
+									<a href="#">Portfolio Center Slider</a>
+								</h3>
+							<div class="portfolio_links"><a href="#">Branding,</a><a href="#">Fashion</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col portfolio_item fashion web">
+				<div class="portfolio_img">
+					<img src="img/2.jpg" alt="alt">
+					<div class="portfolio_img_hover">
+						<a href="img/2.jpg" class="img_popup"><i class="ti-plus"></i></a>
+						<div class="portfolio-description">
+								<h3 class="portfolio-title">
+									<a href="#">Interior Design</a>
+								</h3>
+							<div class="portfolio_links"><a href="#">Branding,</a><a href="#">Fashion</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center">
+			<a href="#" class="btn portfolio_btn">View All Work</a>
+		</div>
+	</div>
+</section>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="isotope/isotope-min.js"></script>
+<script src="magnify-pop/jquery.magnific-popup.min.js"></script>
+<script>
+(function ($) {
+    "use strict";
+
+function portfolioMasonry() {
+  var portfolio = $("#work-portfolio");
+  if (portfolio.length) {
+      portfolio.imagesLoaded(function () {
+          // images have loaded
+          // Activate isotope in container
+          portfolio.isotope({
+              itemSelector: ".portfolio_item",
+              layoutMode: 'masonry',
+              filter: "*",
+              animationOptions: {
+                  duration: 1000
+              },
+              transitionDuration: '0.5s',
+              masonry: {
+
+              }
+          });
+
+          // Add isotope click function
+          $("#portfolio_filter div").on('click', function () {
+              $("#portfolio_filter div").removeClass("active");
+              $(this).addClass("active");
+
+              var selector = $(this).attr("data-filter");
+              portfolio.isotope({
+                  filter: selector,
+                  animationOptions: {
+                      animationDuration: 750,
+                      easing: 'linear',
+                      queue: false
+                  }
+              })
+              return false;
+          })
+      })
+  }
+}
+portfolioMasonry();
+
+function popupGallery() {
+  if ($(".img_popup,.image-link").length) {
+      $(".img_popup,.image-link").each(function () {
+          $(".img_popup,.image-link").magnificPopup({
+              type: 'image',
+              tLoading: 'Loading image #%curr%...',
+              removalDelay: 300,
+              mainClass: 'mfp-with-zoom mfp-img-mobile',
+              gallery: {
+                  enabled: true,
+                  navigateByImgClick: true,
+                  preload: [0, 1] // Will preload 0 - before current, and 1 after the current image,
+              }
+          });
+      })
+  }
+  if ($('.popup-youtube').length) {
+      $('.popup-youtube').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+          mainClass: 'mfp-with-zoom mfp-img-mobile',
+      });
+      $('.popup-youtube').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          mainClass: 'mfp-fade',
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false
+      });
+  }
+}
+popupGallery();
+
+})(jQuery)
+</script>
+</body>
+</html>
