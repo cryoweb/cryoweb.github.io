@@ -1,0 +1,48 @@
+body {margin: 0;}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 100px 15px;
+}
+
+.application-overview-hero {
+    text-align: center;
+    background-image: linear-gradient(225deg, #ffc63f, #fd3358 49%, #bc35d8);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.application-overview-hero:before, .application-overview-hero:after {
+    content: '';
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    pointer-events: none;
+}
+.application-overview-hero:before {
+    width: 1583px;
+    height: 1583px;
+    background-image: radial-gradient(circle 934px at 73.95% 43.4%, #ffff4f 0%, rgba(254,255,39,0) 100%);
+    top: -4px;
+}
+.application-overview-hero:after {
+    width: 942px;
+    height: 942px;
+    background-image: radial-gradient(circle 545px at 36% 24%, #ffff4f 0%, rgba(254,255,39,0) 100%);
+    top: calc(100% - 33px);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+
+.countdown-example {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid #ff6a32;
+	font: 500 15px "Roboto", sans-serif;
+}

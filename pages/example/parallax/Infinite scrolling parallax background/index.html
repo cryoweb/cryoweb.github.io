@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	animation: spaceJam 120s linear infinite;
+}
+
+.background {
+	background: url('background.png');
+}
+
+.midground {
+	background: url('midground.png');
+	animation-duration: 60s;
+}
+
+.foreground {
+	background: url('foreground.png');
+	animation-duration: 30s;
+}
+
+@keyframes spaceJam {
+	100% {
+		background-position: -2500px -500px;
+	}
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg background"></div>
+<div class="bg midground"></div>
+<div class="bg foreground"></div>
+
+</body>
+</html>

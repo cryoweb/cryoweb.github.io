@@ -50,6 +50,9 @@ input[type="radio"].v-h {
 	padding: 0 10px;
 }
 
+.title {
+	color: #000248;
+}
 
 /*Header*/
 .header{

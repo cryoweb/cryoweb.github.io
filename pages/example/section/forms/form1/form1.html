@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="form1.css">
+</head>
+<body>
+	<div class="container">
+		<div class="form_section">
+			<h1>Свяжитесь со мной</h1>
+			<form>
+				<input type="text" name="name" placeholder="Введите ваше имя" class="form-control require">
+				<input type="text" name="email" placeholder="Введите ваш Email" class="form-control require" data-valid="email" data-error="Адрес электронной почты должен быть действительным.">
+				<textarea name="message" rows="5" class="form-control require" placeholder="Введите ваше сообщение"></textarea>
+				<div class="response"></div>
+				<button type="button" class="ad_button submitForm" form-type="contact">Отправить</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

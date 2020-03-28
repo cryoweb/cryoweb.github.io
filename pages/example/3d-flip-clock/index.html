@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="flipclock.css">
+	<style>
+		body{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #222;
+		}
+		.clock{
+			width: auto;
+		}
+		.flip-clock-dot{
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="clock"></div>
+
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="flipclock.min.js"></script>
+	<script>
+var clock = $('.clock').FlipClock(3600 * 24 * 3, {
+		clockFace: 'DailyCounter',
+		countdown: true
+	});
+	</script>
+</body>
+</html>

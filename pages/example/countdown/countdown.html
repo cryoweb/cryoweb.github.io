@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Простой счётчик обратного отсчёта</title>
+	<link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+<div  class="application-overview-hero">
+	<div class="container">
+
+		<div class="countdown-example" id="countdown-example"></div>
+		
+	</div>
+</div>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="jquery.countdown-2.2.0/jquery.countdown.min.js"></script>
+	<script>
+		$("#countdown-example")
+			.countdown("2020/05/08", function(event) {
+			$(this).text(
+				event.strftime('%D дней %H:%M:%S')
+			);
+		});
+	</script>
+</body>
+</html>
