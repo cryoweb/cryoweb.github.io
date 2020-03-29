@@ -228,3 +228,17 @@ label {
   background: #000248;
   color: #ffffff;
 }
+
+.form-messege {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.form-messege.error {
+  color: #f10;
+}
+
+.form-messege.success {
+  color: green;
+  opacity: 0.8;
+}

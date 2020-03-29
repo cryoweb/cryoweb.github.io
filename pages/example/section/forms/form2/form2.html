@@ -16,7 +16,7 @@
 
 	<h3 class="title">Get a free Keystroke quote now</h3>
 
-		<form id="contact-form" method="POST" action="#">
+		<form id="contact-form" method="POST" action="mail.php">
 			<div class="form-group">
 				<input name="con_name" type="text">
 				<label>Name</label>
@@ -49,9 +49,15 @@
 </div>
 
 </div>
-<script src="../../feedback/jquery-3.2.1.min.js"></script>
+<script src="jquery.js"></script>
+<script src="contactform.js"></script>
+<script src="main.js"></script>
 <script>
-
+// $(document).ready(function() {
+// 	$('input, textarea').focus (function() {
+// 		$(this).parents('.form-group').addClass('focused');
+// 	})
+// });
 </script>
 </body>
 </html>
