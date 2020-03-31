@@ -1,0 +1,138 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+body {margin: 0;font-family: Arial, sans-serif;}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 0 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin:  0 -15px;
+}
+.col-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+@media (max-width: 767px){
+  .col-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.content {
+  border-radius: 5px;
+  margin-bottom: 60px;
+  padding: 2px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 575px){
+  .content {
+    margin-bottom: 30px;
+  }
+}
+
+.content.new-item::after {
+  content: " NEW ";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 90px;
+  height: 90px;
+  font-size: 20px;
+  line-height: 90px;
+  color: #fff;
+  text-align: center;
+  background: #4039d4;
+  border-radius: 50%;
+  margin-top: -45px;
+}
+
+.inner-content {
+  height: 100%;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.theme-demo {
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+a, button, input {
+  outline: 0 !important;
+  text-decoration: none !important;
+}
+
+.img-container {
+  height: 435px;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  transition: all .5s;
+}
+@media (max-width: 575px){
+  .img-container {
+    height: 230px;
+  }
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.img-container img {
+  width: 100%;
+  transform: translateY(0);
+  transition: 12s;
+}
+
+.content:hover .img-container img {
+  transform: translateY(calc(-100% + 435px));
+}
+
+.text-content {
+  padding: 17px 15px 16px;
+}
+.text-center {
+  text-align: center!important;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #000030;
+}
+h3 a {
+  color: #4039d4;
+  transition: all .5s;
+}
+h3 a:hover {
+  color: #4fd3d3;
+}
+p {
+  color: #222232;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+}

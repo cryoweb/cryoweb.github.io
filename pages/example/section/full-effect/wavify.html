@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="wavify.css">
+</head>
+<body>
+	<div class="banner" id="banner">
+		<!-- svg wave effect -->
+		<svg width="100%" height="50%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+			<title>Wave</title>
+			<defs></defs>
+			<path id="feel-the-wave" d="" />
+		</svg>
+		<svg width="100%" height="50%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+			<title>Wave</title>
+			<defs></defs>
+			<path id="feel-the-wave-two" d="" />
+		</svg>
+		<!-- End of svg wave effect -->
+
+		<div class="container">
+			<div class="row">
+				<div class="banner-content col">
+					<h1>ICO Template for Your ICO Campaigns</h1>
+					<p>Buy our ICO Template and start your ICO campaign right away. It's a pre-built HTML template
+					<br>designed for meeting all the needs for an ICO campaign. Purchase, change contents and
+					<br>integrate with your cryptocurrency system to launch your campaign.</p>
+					<a class="btn page-scroll" href="#templates">Check All ICO Templates</a>
+				</div>
+			<!-- End of .banner-content -->
+			</div>
+			<!-- End of .row -->
+			<img src="images/banner-img.png" class="banner-img" alt=" banner image">
+		</div>
+
+		<img class="banner-bg-top-left" src="images/banner-bg-top-left.png" alt="banner">
+		<!-- End of .container -->
+	</div>
+
+	<script src="../slider/vendor/jquery-3.2.1.min.js"></script>	
+	<script src="TweenMax.min.js"></script>	
+	<script src="jquery.wavify.js"></script>
+	<script>
+	$(function () {	
+    $('#feel-the-wave').wavify({
+        height: 50,
+        bones: 2,
+        amplitude: 200,
+        color: 'rgba(64, 57, 212, 1)',
+        speed: .20
+    });
+
+    $('#feel-the-wave-two').wavify({
+        height: 50,
+        bones: 2,
+        amplitude: 200,
+        color: 'rgba(64, 57, 212, 1)',
+        speed: .15
+    });
+  });  
+	</script>	
+</body>
+</html>

@@ -506,3 +506,76 @@ button-view-2*/
   opacity: 1;
   transform: scale(1, 1);
 }
+
+
+/*===================
+ad_button*/
+.ad_button {
+  background: #6c7a89;
+  border: none;
+  text-transform: uppercase;
+  height: 40px;
+  width: 170px;
+  font-size: 15px;
+  color: #fff;
+  overflow: hidden;
+  font-weight: 300;
+  position: relative;
+  cursor: pointer;
+  perspective: 1px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ad_button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -13px;
+  width: 0%;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+  height: 100%;
+  -webkit-transform: skewX(-30deg);
+  -moz-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -o-transform: skewX(-30deg);
+  transform: skewX(-30deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ad_button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -13px;
+  width: 0%;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+  height: 100%;
+  -webkit-transform: skewX(-30deg);
+  -moz-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -o-transform: skewX(-30deg);
+  transform: skewX(-30deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ad_button:hover {
+  color: #fff;
+}
+
+.ad_button:hover:before, .ad_button:hover:after {
+  width: 100%;
+}

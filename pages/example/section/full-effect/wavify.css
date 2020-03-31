@@ -1,0 +1,167 @@
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, sans-serif;
+	overflow-x: hidden;
+}
+
+.banner {
+	background: #061649;
+	position: relative;
+}
+@media (max-width: 767px){
+	.banner {
+		text-align: center;
+		height: auto;
+	}
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+.wave {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	z-index: 1;
+	opacity: .07;
+}
+.wave+.wave {
+	position: absolute;
+	z-index: 2;
+}
+.container {
+	max-width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.banner>.container {
+	position: relative;
+	z-index: 99999;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.col {
+	flex: 0 0 100%;
+	max-width: 100%;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.banner-content {
+	padding-top: 174px;
+	text-align: center;
+	align-self: center;
+}
+@media (max-width: 991px){
+	.banner-content {
+		padding-top: 150px;
+	}
+}
+@media (max-width: 575px){
+	.banner-content {
+		padding-top: 120px;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+	margin: 0;
+	padding: 0;
+}
+.banner-content h1 {
+	color: #fff;
+	font-size: 36px;
+	line-height: 1;
+	font-weight: 700;
+}
+@media (max-width: 575px){
+	.banner-content h1 {
+		font-size: 28px;
+	}
+}
+.banner-content p {
+	margin-top: 29px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	color: #b492e9;
+	line-height: 32px;
+	font-weight: 400;
+}
+@media (max-width: 767px){
+	.banner-content p {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	br {display: none;}
+}
+
+a, button, input {
+	outline: 0 !important;
+	text-decoration: none !important;
+}
+
+.btn {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 0 40px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	font-size: 20px;
+	line-height: 50px;
+	color: #ffffff;	
+	background: #4039d4;
+	border-radius: 30px;
+	border: none;
+	letter-spacing: 1px;
+	transition: all .5s;
+	cursor: pointer;
+}
+@media (max-width: 767px){
+	.btn {
+		font-size: 16px;
+		line-height: 40px;
+	}
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+.banner-bg-top-left {
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-30%, -30%);
+}
+
+.banner-img {
+	right: 12%;
+	bottom: -120px;
+	z-index: 55;
+	max-width: 100%;
+	position: relative;
+}
+@media (max-width: 767px){
+	.banner-img {
+		bottom: -50px;
+	}
+}
