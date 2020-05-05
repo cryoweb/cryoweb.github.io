@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Git Cheat Sheet</title>
+	<style>
+		*,*:before;*:after{box-sizing:border-box;}
+		.page{margin-bottom: 50px;}
+		.container{width:100%;max-width:1200px;margin:0 auto;padding:0 10px;}
+		.row{display:flex;margin:0 -10px;}
+		.col{position:relative;flex:0 0 33.333333%;width:100%;padding:0 10px;}
+		@media (max-width: 767px){.row{flex-wrap:wrap;}.col {flex: 0 0 100%;}}
+		.title{padding:3px;font-weight: 600;margin-top:20px;color:#fff;background-color: #34578f;}
+		p{margin-bottom:5px;}
+		code{background-color: #ffff8f;}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="container">
+			<h1>GIT CHEAT SHEET</h1>
+			<div class="row">
+				<div class="col">
+
+					<div class="title">CREATE</div>
+					<p>Clone an existing repository<br> Клонировать существующий репозиторий</p>
+					<code>$ git clone ssh://user@domain.com/repo.git</code>
+					<p>Create a new local repository<br> Создать новый локальный репозиторий</p>
+					<code>$ git init</code>
+
+					<div class="title">LOCAL CHANGES</div>
+					<p>Changed files in your working directory<br> Изменённые файлы в вашем рабочем каталоге</p>
+					<code>$ git status</code>
+					<p>Changes to tracked files<br> Изменения в отслеживаемых файлах</p>
+					<code>$ git diff</code>
+					<p>Add all current changes to the next commit<br> Добавить все текущие изменения в следующий коммит</p>
+					<code>$ git add .</code>
+					<p>Add some changes in 'file' to the next commit<br> Добавьте некоторые изменения в 'file' к следующему коммиту</p>
+					<code>$ git add -p 'file'</code>
+					<p>Commit all local changes in tracked files<br> Зафиксируйте все локальные изменения в отслеживаемых файлах</p>
+					<code>$ git commit -a</code>
+					<p>Commit previously staged changes<br> Зафиксируйте ранее поставленные изменения</p>
+					<code>$ git commit</code>
+					<p>Change the last commit<br> <i>Don‘t amend published commits!</i><br> 
+						Изменить последний коммит<br> <i>Не изменяйте опубликованные коммиты!</i></p>
+					<code>$ git commit --amend</code>
+
+					<div class="title">COMMIT HISTORY</div>
+					<p>Show all commits, starting with newest<br> Показать все коммиты, начиная с самых новых</p>
+					<code>$ git log</code>
+					<p>Show changes over time for a specific file<br> Показать изменения с течением времени для конкретного файла</p>
+					<code>$ git log -p 'file'</code>
+					<p>Who changed what and when in 'file'<br> Кто что изменил и когда в 'file'</p>
+					<code>$ git blame 'file'</code>
+
+					<div class="title">HELP & DOCUMENTATION</div>
+					<p>Get help on the command line<br> Получить справку в командной строке</p>
+					<code>$ git help 'command'</code>
+
+				</div><!-- /col -->
+				<div class="col">
+
+					<div class="title">BRANCHES & TAGS</div>
+					<p>List all existing branches<br> Перечислите все существующие филиалы</p>
+					<code>$ git branch -av</code>
+					<p>Switch HEAD branch<br> Переключатель ГОЛОВНОЙ филиал</p>
+					<code>$ git checkout 'branch'</code>
+					<p>Create a new branch based on your current HEAD<br> Создать новую ветку на основе на вашей текущей голове</p>
+					<code>$ git branch 'new-branch'</code>
+					<p>Create a new tracking branch based on a remote branch<br> Создать новую ветку отслеживания на основе удаленная ветка</p>
+					<code>$ git checkout --track 'remote/branch'</code>
+					<p>Delete a local branch<br> Удалить локальную ветку</p>
+					<code>$ git branch -d 'branch'</code>
+					<p>Mark the current commit with a tag<br> Пометить текущий коммит тегом</p>
+					<code>$ git tag 'tag-name'</code>
+
+					<div class="title">UPDATE & PUBLISH</div>
+					<p>List all currently configured remotes<br> Список всех текущих настроенных пультов</p>
+					<code>$ git remote -v</code>
+					<p>Show information about a remote<br> Показать информацию о пульте</p>
+					<code>$ git remote show 'remote'</code>
+					<p>Add new remote repository, named 'remote'<br> Добавить новый удаленный репозиторий с именем 'remote'</p>
+					<code>$ git remote add 'shortname' 'url'</code>
+					<p>Download all changes from 'remote', but don‘t integrate into HEAD<br> Загрузите все изменения из 'remote', но не интегрируйте в HEAD</p>
+					<code>$ git fetch 'remote'</code>
+					<p>Download changes and directly merge/integrate into HEAD<br> Скачать изменения и напрямую объединить / интегрировать в ГОЛОВУ</p>
+					<code>$ git pull 'remote' 'branch'</code>
+					<p>Publish local changes on a remote<br> Публиковать локальные изменения на удаленном</p>
+					<code>$ git push 'remote' 'branch'</code>
+					<p>Delete a branch on the remote<br> Удалить ветку на пульте</p>
+					<code>$ git branch -dr 'remote/branch'</code>
+					<p>Publish your tags<br> Опубликуйте свои теги</p>
+					<code>$ git push --tags</code>
+
+
+				</div><!-- /col -->
+				<div class="col">
+
+					<div class="title">MERGE & REBASE</div>
+					<p>Merge 'branch' into your current HEAD<br> Слить «ветку» в вашу текущую ГОЛОВУ</p>
+					<code>git merge 'branch'</code>
+					<p>Rebase your current HEAD onto 'branch'<br> <i>Don‘t rebase published commits!</i><br> Перенесите вашу текущую ГОЛОВКУ на <филиал><br> <i>Не перебазируйте опубликованные коммиты!</i></p>
+					<code>$ git rebase 'branch'</code>
+					<p>Abort a rebase<br> Прервать ребаз</p>
+					<code>$ git rebase --abort</code>
+					<p>Continue a rebase after resolving conflicts<br> Продолжить ребаз после разрешения конфликтов</p>
+					<code>$ git rebase --continue</code>
+					<p>Use your configured merge tool to solve conflicts<br> Используйте настроенный инструмент слияния для разрешать конфликты</p>
+					<code>$ git mergetool</code>
+					<p>Use your editor to manually solve conflicts<br> and (after resolving) mark file as resolved<br> Используйте свой редактор для ручного разрешения конфликтов и (после разрешения) пометить файл как разрешенный</p>
+					<code>$ git add 'resolved-file'</code><br>
+					<code>$ git rm 'resolved-file'</code>
+
+					<div class="title">UNDO</div>
+					<p>Discard all local changes in your working directory<br>Откажитесь от всех локальных изменений в вашей работе каталог</p>
+					<code>$ git reset --hard HEAD</code>
+					<p>Discard local changes in a specific file<br> Отменить локальные изменения в определенном файле</p>
+					<code>$ git checkout HEAD 'file'</code>
+					<p>Revert a commit (by producing a new commit with contrary changes)<br> Отменить коммит (создав новый коммит с противоположными изменениями)</p>
+					<code>$ git revert 'commit'</code>
+					<p>Reset your HEAD pointer to a previous commit<br> …and discard all changes since then<br> Сброс указателя HEAD на предыдущий коммит<br> ... и отменить все изменения с тех пор</p>
+					<code>$ git reset --hard 'commit'</code>
+					<p>…and preserve all changes as unstaged changes<br> … И сохранить все изменения как незакрепленные изменения</p>
+					<code>$ git reset 'commit'</code>
+					<p>…and preserve uncommitted local changes<br> … И сохранить незафиксированные локальные изменения</p>
+					<code>$ git reset --keep 'commit'</code>
+
+				</div><!-- /col -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div>
+</body>
+</html>

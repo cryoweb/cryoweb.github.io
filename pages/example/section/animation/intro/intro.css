@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.intro {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.intro-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	animation: anim1 24s ease-out forwards;
+}
+.intro-text {
+	text-align: center;
+	padding: 50px 30px;
+	text-transform: uppercase;
+	font-size: 45px;
+	line-height: 1.5;
+	letter-spacing: 5px;
+	font-family: Roboto;
+	color: #fff;
+	background-color: rgba(255,0,0,.8);
+	border-radius: 5px;
+	opacity: 0;
+	animation: anim2 0.9s ease-out forwards;
+}
+
+.intro-text h2,
+.intro-text h4 {
+	opacity: 0;
+	margin: 0;
+}
+
+.intro-text h2 {
+	animation: anim2 0.75s ease-out 3s forwards;
+}
+
+.intro-text h4 {
+	animation: anim2 0.75s ease-out 4s forwards;
+}
+
+@keyframes anim2 {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes anim1 {
+	100% {
+		transform: scale(1.55);
+	}
+}

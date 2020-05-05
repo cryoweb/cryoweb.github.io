@@ -1,0 +1,48 @@
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, sans-serif;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 32px;
+	background-color: transparent;
+}
+
+.nav a {
+	text-decoration: none;
+	padding-right: 30px;
+	color: #000;
+	font-weight: 700;
+}
+
+.banner {
+	width: 100%;
+	height: 100vh;
+	margin-bottom: 50px;
+	background: url('https://placehold.it/1920x1080') center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.text-content {
+	max-width: 980px;
+	margin: 0 auto;
+	text-align: justify;
+	padding: 50px;
+	line-height: 1.6;
+}
+
+.aos-animate {
+	background-color: crimson;
+}
+.aos-animate a {
+	color: #fff;
+}

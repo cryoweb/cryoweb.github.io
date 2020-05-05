@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="tab-slider.css">
+</head>
+<body>
+
+	<div class="white-section">
+		<div class="holder">
+			<h2>OUR STRENGTHS.</h2>
+			<p>We're a manufacturing platform with several different core strengths.</p>
+			<div class="gallery-holder">
+				<div class="slider-nav">
+					<div>Legal Compliance</div>
+					<div>Infusion Technologies</div>
+					<div>Child-Resistant Packaging</div>
+					<div>Pasteurization &amp; Processing</div>
+					<div>Quality Control &amp; Lab Testing</div>
+					<div>Distribution Ready</div>
+				</div>
+				<div class="gallery-slider">
+					<div style="background-image: url(images/img03.jpg);">
+						<div class="textholder">
+							<h3>Legal Compliance</h3>
+							<p>The core of our business revolves legal compliance. Between Cannabis State Regulation and food processing compliance to FDA standard, we’re always focused on maintaining compliance.</p>
+						</div>
+					</div>
+					<div style="background-image: url(images/img04.jpg);">
+						<div class="textholder">
+							<h3>Infusion Technologies</h3>
+							<p>We’ve licensed some of the most cutting edge cannabis infusion technologies. Allowing us to infused nearly any product with THC and/or CBD without any separation, taste, discoloration, or clarity issues.</p>
+						</div>
+					</div>
+					<div style="background-image: url(images/img05.jpg);">
+						<div class="textholder">
+							<h3>Child-Resistant Packaging</h3>
+							<p>Child-resistant packaging is a lot more involved than it may seem, especially from a legal perspective. In order to maintain compliance, we’ve gone as far as custom molding our own packaging to create an array of options for our customers.</p>
+						</div>
+					</div>
+					<div style="background-image: url(images/img06.jpg);">
+						<div class="textholder">
+							<h3>Pasteurization &amp; Processing</h3>
+							<p>What really sets us apart is our sophistication that revolves around the pasteurization & processing liquids. Our ability to bring new products to market that are shelf-life stable and safe for consumption is the best in the industry.</p>
+						</div>
+					</div>
+					<div style="background-image: url(images/img07.jpg);">
+						<div class="textholder">
+							<h3>Quality Control &amp; Lab Testing</h3>
+							<p>Every product that’s produced in our facility is tested for quality control purposes. Between microbial growth, shelf life, infusion dosing level, and more, we make sure that everything we produce is safe for consumption.</p>
+						</div>
+					</div>
+					<div style="background-image: url(images/img08.jpg);">
+						<div class="textholder">
+							<h3>Distribution Ready</h3>
+							<p>Once our products have passed quality control, they’re staged to be delivered to distribution. As a company, we also have a highly sophisticated distribution arm that our customers can leverage to get their products to market.</p>
+						</div>
+					</div>
+				</div>
+				<div class="slider-progress">
+					<div class="progress"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="../vendor/jquery-3.2.1.min.js"></script>
+<script src="../vendor/slick/slick.min.js"></script>
+<script>
+jQuery(function() {
+	initSlickCarousel();
+});
+
+function initSlickCarousel() {
+	var time;
+	var isPause;
+	var tick;
+	var initFlag = true;
+	var percentTime = 0;
+
+	jQuery('.gallery-slider').on('init', function(event, slick){
+		time = Math.floor(((slick.options.autoplaySpeed - slick.options.speed)/1000) % 60);
+		startProgressbar();
+	}).slick({
+		slidesToScroll: 1,
+		rows: 0,
+		prevArrow: '<button class="slick-prev">Previous</button>',
+		nextArrow: '<button class="slick-next">Next</button>',
+		dots: true,
+		dotsClass: 'slick-dots',
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		speed: 500,
+		asNavFor: '.slider-nav'
+	}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		time = Math.floor((slick.options.autoplaySpeed/1000) % 60);
+		initFlag = true;
+		startProgressbar();
+	});
+
+	jQuery('.slider-nav').slick({
+		slidesToScroll: 1,
+		rows: 0,
+		slidesToShow: 6,
+		prevArrow: '<button class="slick-prev">Previous</button>',
+		nextArrow: '<button class="slick-next">Next</button>',
+		vertical: true,
+		autoplaySpeed: 5000,
+		speed: 3000,
+		asNavFor: '.slick-slider',
+		focusOnSelect: true
+	});
+  
+	jQuery('.gallery-holder').on({
+		mouseenter: function() {
+		  isPause = true;
+		},
+		mouseleave: function() {
+		  isPause = false;
+		}
+	})
+  
+  function startProgressbar() {
+    resetProgressbar();
+    percentTime = 0;
+    isPause = false;
+    tick = setInterval(interval, 10);
+  }
+  
+  function interval() {
+    if(isPause === false) {
+      percentTime += 1 / time;
+      jQuery('.slider-progress .progress').css({
+        width: percentTime+"%"
+      });
+      if(percentTime >= 100){
+		jQuery('.gallery-slider').slick('slickNext');
+		startProgressbar();
+      }
+    }
+  }
+  
+  function resetProgressbar() {
+    jQuery('.slider-progress .progress').css({
+     width: 0+'%' 
+    });
+    clearTimeout(tick);
+  }
+}
+
+</script>
+</body>
+</html>

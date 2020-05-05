@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+<section class="testimonials">
+	<div class="container">
+
+		<h2 class="testimonials_heading">OUR CLIENTS FEEDBACK</h2>
+
+		<div id="testimonials-container-1" class="container-testimonials">
+
+			<div class="testimonial-box">
+				<ul class="testimonial-nav">
+					<li>
+						<a href="#testimonial-1" class="active">
+						<img alt="Testimonial #06" src="images/t1.jpg" class="hazel_grayscale">
+							<div class="cover-test-img"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#testimonial-2">
+							<img alt="Testimonial #05" src="images/t6.jpg" class="hazel_grayscale">
+							<div class="cover-test-img"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#testimonial-3">
+							<img alt="Testimonial #04" src="images/t2.jpg" class="hazel_grayscale">
+							<div class="cover-test-img"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#testimonial-4">
+							<img alt="Testimonial #03" src="images/t3.jpg" class="hazel_grayscale">
+							<div class="cover-test-img"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#testimonial-5">
+							<img alt="Testimonial #02" src="images/t5.jpg" class="hazel_grayscale">
+							<div class="cover-test-img"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#testimonial-6">
+							<img alt="Testimonial #01" src="images/t4.jpg" class="hazel_grayscale">
+							<div class="cover-test-img"></div>
+						</a>
+					</li>
+				</ul>
+
+				<div class="testimonials-content" style="height: 134px;">
+
+					<div class="testimonial active" id="testimonial-1">
+						<p>Dynamically whiteboard timely models through bricks-and-clicks e-services. Holisticly predominate resource maximizing users through backend leadership skills. Continually mesh team building strategic theme areas without standards compliant users. Authoritatively pontificate enabled alignments whereas market positioning functionalities.</p>
+
+						<span class="t-author">Susone Moe<br><a href="#">TreeKode</a></span>	
+					</div>
+
+					<div class="testimonial" id="testimonial-2">
+						<p>Intrinsicly embrace top-line core competencies with real-time metrics. Conveniently reinvent functionalized collaboration</p>
+
+						<span class="t-author">Maria Doe</span>
+					</div>
+
+					<div class="testimonial" id="testimonial-3">
+						<p>Credibly envisioneer enterprise-wide content before resource maximizing leadership skills. Progressively visualize professional value via distributed value. Efficiently restore adaptive bandwidth through best-of-breed outsourcing. Appropriately redefine professional sources with extensible strategic theme areas. Progressively exploit plug-and-play ROI and excellent platforms</p>
+
+						<span class="t-author">Soni Marvel<br><a href="#">TreeWorks</a></span>
+					</div>
+
+					<div class="testimonial" id="testimonial-4">
+						<p>Compellingly e-enable distributed deliverables whereas customer directed vortals. Objectively pontificate leveraged collaboration and idea-sharing without bleeding-edge resources. Professionally administrate business web services without future-proof catalysts for change. Energistically engage diverse vortals and prospective methods of empowerment. Competently pontificate diverse</p>
+
+						<span class="t-author">Jotas Doe<br><a href="#">TreeWorks</a></span>
+					</div>
+
+					<div class="testimonial" id="testimonial-5">
+						<p>Enthusiastically syndicate inexpensive services and 24/7 bandwidth. Phosfluorescently develop cooperative content vis-a-vis best-of-breed alignments. Competently innovate orthogonal e-tailers via interactive core competencies. Uniquely implement transparent</p>
+
+						<span class="t-author">Val Draca<br> TreeWorks</span>
+						</div>
+
+						<div class="testimonial" id="testimonial-6">
+							<p>Rapidiously integrate multimedia based resources whereas low-risk high-yield technologies. Proactively innovate market positioning products without B2B products. Progressively recaptiualize</p>
+
+							<span class="t-author">Maria Lucas <br> <a href="#">TreeWorks</a></span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+	</div>
+</section>
+
+
+<script src="../jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+var who = jQuery('#testimonials-container-1');
+who.find('.testimonials-content').height( who.find('.testimonials-content .testimonial.active > p').height() + who.find('.testimonials-content .testimonial.active > span').height() +40 );
+who.find('.testimonial-nav a').on('click', function(e){
+e.preventDefault();
+});
+who.find('.testimonial-nav a').on('mouseenter', function(){
+who.find('.testimonial-nav a').removeClass('active');
+jQuery(this).addClass('active');
+who.find('.testimonial.active').removeClass('active');
+who.find(jQuery(this).attr('href')).addClass('active');
+who.find('.testimonials-content').height( who.find('.testimonials-content .testimonial.active > p').height() + who.find('.testimonials-content .testimonial.active > span').height() +40 );
+});
+});
+</script>
+
+</body>
+</html>
