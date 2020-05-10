@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-$accent: #ff9900;
+/*$accent: #ff9900;*/
 
 *,
 *:before,
@@ -9,9 +9,12 @@ $accent: #ff9900;
 	box-sizing: border-box;
 }
 
-
+aside,
+nav,
 footer,
-header {
+header,
+section,
+code {
 	display: block;
 }
 
@@ -19,11 +22,6 @@ p {
 	margin: 0;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
 
 html,
 body {
@@ -43,20 +41,18 @@ body {
 	line-height: 22px;
 	color: #333;
 }
-
 .page {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	flex-grow: 1;
 	min-height: 100vh;
+	flex-flow: column nowrap;
+	flex-grow: 1;
 }
 
 .container {
 	max-width: 1300px;
 	width: 100%;
-	padding: 0 10px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 
@@ -66,7 +62,7 @@ body {
 	margin-top: auto;
 	min-width: 50px;
 	appearance: none;
-	border: 2px solid $accent;
+	border: 2px solid #ff9900;
 	border-radius: 3px;
 	background: transparent;
 	font-family: inherit;
@@ -78,23 +74,22 @@ body {
 }
 .btn:hover,
 .btn:focus {
-	background: $accent;
+	background: #ff9900;
 	color: #fff;
 }
 
 
+
 .header {
 	width: 100%;
-	background: $accent;
-	background: linear-gradient(0deg, #fff, $accent);
+	background: #ff9900;
+	background: linear-gradient(to top, #fff, #ff9900);
 }
-
 .header-row {
 	display: flex;
 	align-items: center;
 	height: 45px;
 }
-
 .header-text {
 	margin-left: 15px;
 }
@@ -105,23 +100,28 @@ body {
 }
 
 .customer-data {
+	margin: 0 -5px;
+	padding: 0;
+	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -5px;
 }
 
 .customer-data-item {
 	display: flex;
 	width: calc(30% - 10px);
 	margin: 5px;
-	@media (max-width: 767px) {
+}
+.customer-data-item:nth-child(3n) {
+	width: calc(40% - 10px);
+}
+@media (max-width: 767px) {
+	.customer-data-item {
 		width: 100%;
 	}
-	&:nth-child(3n) {
-		width: calc(40% - 10px);
-		@media (max-width: 767px) {
-			width: 100%;
-		}
+
+	.customer-data-item:nth-child(3n) {
+		width: 100%;
 	}
 }
 
@@ -132,7 +132,7 @@ body {
 	justify-content: space-between;
 	width: 100%;
 	padding: 10px;
-	border: 1px solid $accent;
+	border: 1px solid #ff9900;
 }
 
 .additional-data {
@@ -146,7 +146,7 @@ body {
 
 .footer {
 	width: 100%;
-	background: #fc6;
+	background-color: #fc6;
 }
 .footer-row {
 	display: flex;

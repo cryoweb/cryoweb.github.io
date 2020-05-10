@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="map.css">
+</head>
+<body class="mainpage">
+
+<div class="container">
+<div class="contacts-map-wrapper">
+	<div class="fix">
+		<h2>Где купить фасадные системы АЛЬТ-ФАСАД</h2>
+	</div>
+	<div class="contacts-map">
+		<div class="contacts-map-in">
+			<div class="contacts-map-image">
+				<img src="contacts-map.svg" alt="" width="1584">
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-peterburg tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address">Россия, Санкт-Петербург, набережная Обводного канала, 193, БЦ "Циолковский", 4эт., оф.5</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-moscow tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address"><strong>Головной офис</strong> - Россия, Москва, 121059, Бережковская набережная д.38, стр.1</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-reutov tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address"><strong>Склад</strong> - Россия, Московская область, Реутов, Транспортная улица, 11Б</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-tryohgorny tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address">Россия, Челябинская область, Трёхгорный, Восточное шоссе, 2А</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-chelyabinsk tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address">Россия, Челябинск, улица Чайковского, 173</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-novosibirsk tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address">Россия, Новосибирск, Красный проспект, 28, оф. 401</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+			<div class="contacts-map-tooltip contacts-map-tooltip-irkutsk tooltip">
+				<div class="contacts-map-tooltip-point tooltip-point"></div>
+				<div class="contacts-map-tooltip-text tooltip-text">
+					<div class="contacts-map-tooltip-text-in">
+						<div class="contacts-map-tooltip-title">
+							<strong><span class="highlight">Вентфасады Альтернатива</span></strong>
+						</div>
+						<div class="contacts-map-tooltip-address">Россия, Иркутск, улица Пискунова, 98, оф. 5</div>
+					</div>
+					<div class="contacts-map-tooltip-corner"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script src="../slider/vendor/jquery-3.2.1.min.js"></script>
+<script>
+	$('.contacts-map-tooltip').click(function(event) {
+		if(!($(this).hasClass('active'))) {
+			$(this).addClass('active').siblings('.contacts-map-tooltip').removeClass('active');
+		} else {
+			$(this).removeClass('active');
+		}
+	});
+</script>	
+</body>
+</html>
