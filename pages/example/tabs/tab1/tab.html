@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	.tab{cursor:pointer;}
+	.tab.active{color:salmon;}
+</style>
+<div class="container">
+
+	<div class="wrapper">
+		<div class="tabs">
+			<span class="tab">Вкладка 1</span>
+			<span class="tab">Вкладка 2</span>
+			<span class="tab">Вкладка 3</span>
+		</div>
+		<div class="tab_content">
+			<div class="tab_item">Содержимое 1</div>
+			<div class="tab_item">Содержимое 2</div>
+			<div class="tab_item">Содержимое 3</div>
+		</div>
+	</div>
+
+</div>
+<script src="../../3d-flip-clock/jquery-3.4.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		$(".tab_item").not(":first").hide();
+		$(".wrapper .tab").click(function(){
+			$(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+			$(".tab_item").hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass("active");
+
+	});
+</script>
+</body>
+</html>

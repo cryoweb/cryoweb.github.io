@@ -1,12 +1,27 @@
 :root {
-	--accent: #ff6a32;
+	--accent: #e83a15;
 	--blu: #24a0ed;
 	--text: #232323;
+	--bg: #00045f;
+	--tmdbDarkBlue: 3,37,65;
+	--dark-blue: #002ead;
+    --theme-color: #0a0a23;
+    --gray85: #1b1b32;
+    --gray80: #2a2a40;
+    --gray75: #3b3b4f;
+    --gray45: #858591;
+    --gray15: #d0d0d5;
+    --gray10: #dfdfe2;
+    --gray05: #eeeef0;
 }
 *, *::before, *::after {
 	box-sizing: inherit;
 }
-
+::selection {
+	text-shadow: none;
+	background: var(--dark-blue);
+	color: #fff;
+}
 html {
 	box-sizing: border-box;
 }
@@ -17,7 +32,13 @@ body {
 	font-family: Roboto, sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
-	color: var(--text);
+	color: #0a0a23;
+}
+
+.page {
+	/*background: url(../images/bg-shpe.png) no-repeat 0 0/cover var(--bg);*/
+	/*background-image: radial-gradient(at 30% top, rgba(3,29,51, 1) 0%, rgba(var(--tmdbDarkBlue), 1) 70%);*/
+
 }
 
 ul,li {
@@ -62,7 +83,7 @@ input[type="radio"].v-h {
 	width: 100%;
 	top: 0;
 	padding: 20px 0;
-	background-color: #fff;
+	background: var(--theme-color);
 	box-shadow: 0 0 30px 0 rgba(32,39,48,.08);
 }
 .header-box{
@@ -72,11 +93,14 @@ input[type="radio"].v-h {
 }
 
 .logo{
+	color: #fff;
 	font-size: 20px;
 	font-weight: 700;
+	letter-spacing: 1px;
 }
 .logo span{
-	color: var(--blu);
+	font-size: 28px;
+	color: var(--accent);
 }
 
 li {

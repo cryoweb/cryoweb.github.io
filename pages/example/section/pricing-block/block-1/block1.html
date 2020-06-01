@@ -133,6 +133,14 @@
 
   </div>
 </div>
-
+<script src="../../slider/vendor/jquery-3.2.1.min.js"></script>
+<script>
+jQuery('.plan-box-container').on('mouseenter', function(){
+  if(jQuery(window).width() > 768) {
+  var leftValue = (jQuery(this).index() * 25);
+  jQuery('.plan-box--floating-bg').css({left: 'calc(' + leftValue + '% - 1px)'});
+  }
+});
+</script>
 </body>
 </html>

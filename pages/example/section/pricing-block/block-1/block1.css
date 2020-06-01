@@ -5,8 +5,16 @@ body {
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.6;
+	overflow-x: hidden;
 }
-
+/*https://kinsta.com/se/*/
+/*div[class^=col-].nopadding:not(.button) {
+	margin-left: 0!important;
+	margin-right: 0!important;
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+*/
 .plans-box {
 	position: relative;
 	padding-top: 80px;
@@ -84,17 +92,20 @@ body {
 	.plan-box-container {
 		flex-basis: 100%;
 		max-width: 100%;
+		border-width: 0 0 1px 0 !important;
+		border-style: solid;
+		border-color: #2e1f94;
 	}
 }
-div[class^=col-].nopadding:not(.button) {
-	margin-left: 0!important;
-	margin-right: 0!important;
-	padding-left: 0!important;
-	padding-right: 0!important;
-}
+
 .plan-box {
+	display: flex;
 	padding: 30px 20px;
 	text-align: center;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 .plan-box__name {
 	margin-bottom: 15px;
