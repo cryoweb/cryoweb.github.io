@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    input[type="checkbox"]{display: none;}
+    .menu{cursor: pointer;}
+    .hamburger{
+      width: 80px;
+      position: relative;
+    }
+    .hamburger,.hamburger::before,.hamburger::after{
+      height: 7px;
+      background-color: #515151;
+      display: inline-block;
+      transition: all 0.5s cubic-bezier(0.50,-0.05,0.60,0.53);
+      border-radius: 2px;
+    }
+    .hamburger::before,.hamburger::after{
+      content: '';
+      width: 40px;
+      position: absolute;
+    }
+    .hamburger::before{
+      transform: translateY(-20px);
+      transform-origin: right;
+    }
+    .hamburger::after{
+      transform: translateY(20px);
+      right: 0;
+      transform-origin: left;
+    }
+    input[type="checkbox"]:checked + label .hamburger::before{
+      transform: translate(0) rotate(450deg);
+    }
+    input[type="checkbox"]:checked + label .hamburger::after{
+      transform: translate(0) rotate(450deg);
+    }
+    input[type="checkbox"]:checked + label .hamburger{
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="menu">
+      <span class="hamburger"></span>
+    </label>
+  </div>
+</body>
+</html>

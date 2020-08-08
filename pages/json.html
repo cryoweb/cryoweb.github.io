@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+</head>
+<body>
+<section class="sect1">
+	<div class="container">
+		<p>JSON (JavaScript Object Notation) - Можно перевести как «способ записи объектов в JavaScript».(специальный формат передачи данных на сервер и обратно)</p>
+		<p>Для работы с этим форматом в JavaScript есть две специальные команды:</p>
+		<ul>
+			<li>JSON.stringify() — переводит объект в JSON-строку, которую можно отправить на сервер;</li>
+			<li>JSON.parse() — наоборот, разбирает JSON-данные на составляющие и отправляет их в нужные переменные или объекты.</li>
+			<code>
+				<pre>
+// создаём объект, где будут храниться данные для бонусной программы
+var person = {
+
+  firstname: "Михаил",
+
+  lastname: "Максимов",
+
+  phone: "+79201234567",
+
+  city: "Москва",
+
+  age: 37,
+
+  bonus: 2000,
+
+  prev: ["Кроссовки", "Турник" ,"Зимняя куртка"]
+
+};
+
+ 
+// выводим содержимое объекта
+
+console.log('Имя: ' + person.firstname);
+
+console.log('Фамилия: ' + person.lastname);
+
+console.log('Телефон: ' + person.phone);
+
+console.log('Город: ' + person.city);
+
+console.log('Возраст: ' + person.age);
+
+console.log('Бонусы: ' + person.bonus);
+
+console.log('Предыдущие покупки: ' + person.prev[0] + ' ' + person.prev[1] + ' '  + person.prev[2]);
+
+ 
+// переводим объект в JSON-формат
+
+var jsonData
+
+jsonData = JSON.stringify(person);
+
+ 
+// смотрим, что получилось
+
+console.log(jsonData);
+
+ 
+// переводим обратно в объект
+
+person = JSON.parse(jsonData);
+				</pre>
+			</code>
+		</ul>
+	</div>
+</section>
+</body>
+</html>

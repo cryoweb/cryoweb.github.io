@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	code{
+		padding: 2px 4px;
+		background: #f5f2f0;
+		border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #d5d5d5;
+	}
+	li{margin-bottom: 10px;}
+</style>
+</head>
+<body>
+	<p><code>-webkit-tap-highlight-color</code> Цвет выделения ссылок или "нажимаемых" элементов при касании</p>
+	<p>Свойство <code>-webkit-tap-highlight-color</code> устанавливает цвет подсветки ссылки или любого кликабельного JavaScript элемента при касании. Данное свойство работает только в версиях WebKit на мобильных платформах (например, браузере Safari на устройствах с iOS версии 1.1.1 и выше). Что бы отключить подсветку элементов необходимо установить полную прозрачность для данного свойства: <code>-webkit-tap-highlight-color: rgba(0, 0, 0, 0);</code></p>
+	<p>Свойство <code>-webkit-tap-highlight-color</code> относится к спецификации CSS, применяется к всем элементам, его значение не наследуется от родительского элемента в иерархии документа, Является расширением движка WebKit (браузеры Chrome и Safari), и не совместимо с другими браузерами.</p>
+	<ul>
+		<li><code>div * {margin:0;}</code> - применить ко всем селекторам в блоке</li>
+		<li><code>div + p {margin:0;}</code> - смежный, применяется к первому селектору, сразу после дива</li>
+		<li><code>div > p {margin:0;}</code> - дочерний селектор, к прямому потомку</li>
+		<li><code>div ~ p {margin:0;}</code> - ко всем p</li>
+		<li><code>input[type=button]</code> - обращение только к тем инпутам у которых type=button</li>
+		<li><code>a[href*="site.html"]</code> - обращение ко всем ссылкам у которых href=site.html</li>
+		<li><code>img[src$=".jpg"]</code> - обращение ко всем файлам с расширением jpg</li>
+		<li><code>p:first-letter</code> - выделить первую букву элемента</li>
+		<li><code>p:first-line</code> - выделить первую строку</li>
+		<li><code>li:first-child</code> - применяется к первому элементу</li>
+		<li><code>li:last-child</code> - применяется к последнему элементу</li>
+		<li><code>li:nth-child(3)</code> - третий элемент</li>
+		<li><code>li:nth-last-child(2)</code> - второй элемент с конца</li>
+		<li><code>li:nth-child(even)</code> - выделить чётные</li>
+		<li><code>li:nth-child(odd)</code> - выделить нечётные</li>
+		<li><a href="https://learn.javascript.ru/css-selectors">css-селекторы</a></li>
+	</ul>
+
+<p>Привет, ребят))
+Я - начинающий веб-программист: верстаю шаблоны, изучаю js и всё, что с этим связано
+Я бы хотел познакомиться с начинающим дизайнером для работы дружеского общения и общению по интересам: я верстаю то, что делаете Вы
+Буду рад знакомству, пишите)</p>
+	<section class="sect1">
+		<div class="container">
+			<h3 class="title">Title h3</h3>
+		</div>
+	</section>
+</body>
+</html>

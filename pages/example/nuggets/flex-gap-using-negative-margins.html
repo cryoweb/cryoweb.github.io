@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.container {
+		max-width: 300px;
+		margin: 150px auto;
+	}
+	.stack {
+		--gap: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: calc(-1 * var(--gap));
+		margin-left: calc(-1 * var(--gap));
+	}
+	.stack--vertical {
+		flex-direction: column;
+	}
+	.stack > * {
+		margin-bottom: var(--gap);
+		margin-left: var(--gap);
+	}
+
+/*	Using the gap property:
+	.stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	} */
+</style>
+<body>
+<div class="container">
+	<div class="margin-bottom-xl">
+		<p class="margin-bottom-sm">Horizontal Stacking</p>
+		<div class="stack">
+			<button class="btn btn--primary">Button</button>
+			<button class="btn btn--primary">Button</button>
+			<button class="btn btn--primary">Button</button>
+		</div>
+	</div>
+
+	<p class="margin-bottom-sm">Vertical Stacking</p>
+	<div class="stack stack--vertical">
+		<button class="btn btn--primary">Button</button>
+		<button class="btn btn--primary">Button</button>
+		<button class="btn btn--primary">Button</button>
+	</div>
+</div>
+</body>
+</html>

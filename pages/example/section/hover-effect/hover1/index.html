@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.container {
+		max-width: 500px;
+		margin: 150px auto;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	.radio-btns {
+		display: grid;
+		grid-template-columns: repeat(3, 150px);
+		gap: 4px;
+	}
+	.radio-btns__btn {
+		position: relative;
+		cursor: pointer;
+		transition: .3s;
+	}
+	.radio-btns__btn::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0, 0);
+		transition: .3s;
+	}
+	.radio-btns:hover .radio-btns__btn:not(:hover) {
+		filter: grayscale(100%);
+	}
+	.radio-btns:hover .radio-btns__btn:not(:hover)::after {
+		background-color: rgba(0,0,0, 0.5);
+	}
+</style>
+<body>
+
+<div class="container">
+	<div class="radio-btns" role="radiogroup">
+		<div class="radio-btns__btn" role="radio" aria-checked="false" tabindex="-1" aria-label="Select image one">
+			<img src="https://picsum.photos/id/10/350" alt="Image description">
+		</div>
+		<div class="radio-btns__btn" role="radio" aria-checked="false" tabindex="-1" aria-label="Select image one">
+			<img src="https://picsum.photos/id/1011/350" alt="Image description">
+		</div>
+		<div class="radio-btns__btn" role="radio" aria-checked="false" tabindex="-1" aria-label="Select image one">
+			<img src="https://picsum.photos/id/1023/350" alt="Image description">
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,102 @@
+/*v1*/
+.link-fx-1 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 6px;
+  text-decoration: none;
+}
+
+.link-fx-1 .icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  transform: translateX(100%) rotate(90deg);
+  font-size: 32px;
+}
+
+.link-fx-1 .icon circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset .2s;
+}
+
+.link-fx-1 .icon line {
+  transition: transform .4s;
+  transform-origin: 13px 15px;
+}
+
+.link-fx-1 .icon line:last-child {
+ transform-origin: 19px 15px;
+}
+
+
+.link-fx-1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: right center;
+  transition: transform .2s .1s;
+}
+
+.link-fx-1:hover .icon circle {
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset .2s .1s;
+}
+
+.link-fx-1:hover .icon line {
+  transform: rotate(-180deg);
+}
+
+.link-fx-1:hover .icon line:last-child {
+  transform: rotate(180deg);
+}
+
+.link-fx-1:hover::before {
+  transform: translateX(17px) scaleX(0);
+  transition: transform .2s;
+}
+
+
+/*v2*/
+
+.link-fx-2 {
+  position: relative;
+  display: inline-block;
+  padding: 4px 6px;
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-contrast-higher), var(--color-contrast-higher));
+  background-size: 100% 1px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  transition: background-size .3s var(--ease-out);
+}
+.link-fx-2::after {
+  content: attr(data-link-fx-clone);
+  color: var(--color-bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(4px);
+  transition: clip-path .3s, transform .3s;
+  transition-timing-function: var(--ease-out);
+}
+
+.link-fx-2:hover {
+  background-size: 100% 100%;
+}
+.link-fx-2:hover::after {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transform: translateY(0px);
+}

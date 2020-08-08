@@ -15,9 +15,9 @@
 
 			--grid-sides: 16px;
 			--grid-gutter: 16px;
-			--grig-columns: 4;
+			--grid-columns: 4;
 			--grid-column-width: calc(
-				(100% - var(--grid-gutter) * var(--grig-columns)) / var(--grig-columns)
+				(100% - var(--grid-gutter) * var(--grid-columns)) / var(--grid-columns)
 			);
 			--grid-color: rgb(255 0 0 / 0.1);
 
@@ -43,14 +43,14 @@
 		@media (min-width: 736px) {
 			.grid::before {
 				--grid-sides: 24px;
-				--grig-columns: 8;
+				--grid-columns: 8;
 			}
 		}
 
-		@media (min-width: 736px) {
+		@media (min-width: 1008px) {
 			.grid::before {
 				--grid-sides: 32px;
-				--grig-columns: 12;
+				--grid-columns: 12;
 			}
 		}
 	</style>

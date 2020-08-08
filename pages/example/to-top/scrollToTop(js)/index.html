@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;border: none;}
+		body{height: 200vh;background: linear-gradient(#121212 50%, #ffffff 50%);}
+		#scroll-to-top{
+			position: fixed;
+			bottom: 48px;
+			right: 48px;
+			padding: 24px;
+			border-radius: 8px;
+			box-shadow: 0 4px 44px rgba(173,181,206,.75);
+			background: #fff;
+			transition-property: background,color,bottom,opacity,visibility;
+			transition-duration: .25s;
+		}
+		#scroll-to-top[data-show="false"]{
+			bottom: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+		#scroll-to-top svg{
+			color: #121212;
+			height: 24px;
+			width: 24px;
+		}
+		#scroll-to-top:hover{
+			cursor: pointer;
+			background: #121212;
+		}
+		#scroll-to-top:hover svg{
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="scroll-to-top" data-show="false">
+		<i data-feather="arrow-up"></i>
+	</div>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+	feather.replace()
+</script>
+<script>
+	const scrollToTop = document.getElementById('scroll-to-top');
+	let dataShow = false;
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 50 && !dataShow) {
+			scrollToTop.setAttribute('data-show', 'true');
+			dataShow = true;
+		}
+		if (window.scrollY <= 50 && dataShow) {
+			scrollToTop.setAttribute('data-show', 'false');
+			dataShow = false;
+		}
+	});
+
+	scrollToTop.addEventListener('click', () => {
+		window.scrollTo({
+			top:0,
+			behavior: 'smooth'
+		});
+	});
+</script>
+</body>
+</html>

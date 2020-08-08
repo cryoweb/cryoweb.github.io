@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #21d4fd;
+    background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  }
+  .box-wrapper{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+  }
+  .box-wrapper .box{
+    width: 52%;
+    height: 90%;
+    background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+    transition: all .5s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-wrapper .box::before, .box-wrapper .box::after{
+    content: '';
+    position: absolute;
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-wrapper .box::before{
+    transform: rotateZ(60deg);
+  }
+  .box-wrapper .box::after{
+    transform: rotateZ(-60deg);
+  }
+  .box-wrapper .box:hover{
+    border-radius: 50px;
+  }
+  .box-wrapper .box:hover::before,
+  .box-wrapper .box:hover::after{
+    border-radius: 50px;
+  }
+  .box-wrapper:hover{
+    transform: rotateZ(180deg);
+  }
+</style>
+<body>
+  <div class="box-wrapper">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
