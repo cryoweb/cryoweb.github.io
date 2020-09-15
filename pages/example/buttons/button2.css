@@ -759,6 +759,43 @@ ad_button*/
 }
 
 /* ===================
+tommy_day */
+.tommy_day {
+  color: #fff;
+  font-size: 22px;
+  display: inline-block;
+  background-color: #e63946;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 7px;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform .2s ease-in-out;
+}
+.tommy_day:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 7px;
+  transition: transform .2s ease-in-out;
+}
+.tommy_day:hover {
+  transform: translate(-2px, -2px);
+}
+.tommy_day:hover:before {
+  transform: translate(6px, 6px);
+}
+
+/* ===================
 HuperPC_button*/
 
 
