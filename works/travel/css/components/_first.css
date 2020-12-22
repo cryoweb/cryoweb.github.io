@@ -1,7 +1,7 @@
 .first {
 	height: 100vh;
 	min-height: 640px;
-	background-image: url("/img/first-bg.jpg");
+	background-image: url("../../img/first-bg.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -96,7 +96,7 @@
 	transform: translateY(-50%);
 	width: 18px;
 	height: 18px;
-	background-image: url("/img/search.svg");
+	background-image: url("../../img/search.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -137,11 +137,11 @@
 .btn-right {
 	left: auto;
 	right: 50px;
-	background-image: url("/img/arrow-right.svg");
+	background-image: url("../../img/arrow-right.svg");
 }
 
 .btn-left {
-	background-image: url("/img/arrow-left.svg");
+	background-image: url("../../img/arrow-left.svg");
 }
 
 .main-slider__media {
@@ -157,7 +157,7 @@
 	transform: translate(-50%, -50%);
 	width: 32px;
 	height: 41px;
-	background-image: url("/img/play1.svg");
+	background-image: url("../../img/play1.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

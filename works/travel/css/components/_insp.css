@@ -53,13 +53,13 @@
 	height: 710px;
 }
 
-.insp__item-1 {background-image: url("/img/insp-1.jpg");}
-.insp__item-2 {background-image: url("/img/insp-2.jpg");}
-.insp__item-3 {background-image: url("/img/insp-3.jpg");}
-.insp__item-4 {background-image: url("/img/insp-4.jpg");}
-.insp__item-5 {background-image: url("/img/insp-5.jpg");}
-.insp__item-6 {background-image: url("/img/insp-6.jpg");}
-.insp__item-7 {background-image: url("/img/insp-7.jpg");}
+.insp__item-1 {background-image: url("../../img/insp-1.jpg");}
+.insp__item-2 {background-image: url("../../img/insp-2.jpg");}
+.insp__item-3 {background-image: url("../../img/insp-3.jpg");}
+.insp__item-4 {background-image: url("../../img/insp-4.jpg");}
+.insp__item-5 {background-image: url("../../img/insp-5.jpg");}
+.insp__item-6 {background-image: url("../../img/insp-6.jpg");}
+.insp__item-7 {background-image: url("../../img/insp-7.jpg");}
 
 .insp__play {
 	position: absolute;
@@ -67,7 +67,7 @@
 	top: 40px;
 	width: 64px;
 	height: 64px;
-	background-image: url("/img/play.svg");
+	background-image: url("../../img/play.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

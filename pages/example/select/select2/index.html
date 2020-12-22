@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<select name="doctors">
+    <option disabled selected>Все специальности</option>
+    <option value="pediatric-dentist">Детский стамотолог</option>
+    <option value="surgeon">Хирург</option>
+</select>
+
+<div class="wrap">
+    <div class="item">
+        <div class="doctor surgeon">
+            Хирург 1
+        </div>
+    </div>
+    <div class="item">
+        <div class="doctor surgeon">
+            Хирург 2
+        </div>
+    </div>
+    <div class="item">
+        <div class="doctor surgeon">
+            Хирург 3
+        </div>
+    </div>
+    <div class="item">
+        <div class="doctor pediatric-dentist">
+            Дантист 1
+        </div>
+    </div>
+    <div class="item">
+        <div class="doctor pediatric-dentist">
+            Дантист 2
+        </div>
+    </div>
+</div>
+
+<script>
+var toggle = document.querySelector('[name="doctors"]');
+
+toggle.addEventListener('change', function() { 
+    var chosenClass = this[this.selectedIndex].value;
+        var items = document.querySelectorAll('.item');
+
+    Array.prototype.forEach.call(items, function(item) {
+        var child = item.children[0];
+        var childClasses = child.className.split(' ');
+
+        if (childClasses.indexOf(chosenClass) === -1) {
+            item.style.display='none';
+        } else {
+            item.style.display='block';
+        }
+    });
+});
+</script>    
+</body>
+</html>

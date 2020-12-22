@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#items {
+  margin-top: 100px;
+}
+
+.item {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+}
+
+.red { background: #cf2624; }
+.blue { background: #2478cf; }
+.green { background: #24cf7c; }
+.orange { background: #cf7c24; }
+.yellow { background: #f1e81f; }
+</style>
+</head>
+<body>
+<select id="filter">
+  <option value="item">все</option>
+  <option value="red">красный</option>
+  <option value="blue">синий</option>
+  <option value="green">зелёный</option>
+  <option value="orange">оранжевый</option>
+  <option value="yellow">жёлтый</option>
+</select>
+
+<div id="items">
+  <div class="item red">1</div>
+  <div class="item blue">2</div>
+  <div class="item red">3</div>
+  <div class="item green">4</div>
+  <div class="item red">5</div>
+  <div class="item orange">6</div>
+  <div class="item green">7</div>
+  <div class="item yellow">8</div>
+  <div class="item green">9</div>
+  <div class="item orange">10</div>
+  <div class="item yellow">11</div>
+  <div class="item blue">12</div>
+  <div class="item green">13</div>
+  <div class="item orange">14</div>
+  <div class="item blue">15</div>
+  <div class="item orange">16</div>
+  <div class="item red">17</div>
+  <div class="item yellow">18</div>
+</div>
+
+<script>
+var filter_select_el = document.getElementById('filter');
+var items_el = document.getElementById('items');
+
+filter_select_el.onchange = function() {
+    console.log(this.value);
+  var items = items_el.getElementsByClassName('item');
+  for (var i=0; i<items.length; i++) {
+    if (items[i].classList.contains(this.value)) {
+        items[i].style.display = 'block';
+    } else {
+        items[i].style.display = 'none';
+    }
+  }
+};
+</script>  
+</body>
+</html>

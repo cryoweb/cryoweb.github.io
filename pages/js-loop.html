@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<section meta="" class="theory-viewer__block theory-viewer__block_type_markdown">
+	<div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory">
+		<h1>Циклы</h1>
+		<div class="paragraph">В программах бывает много повторяющихся одинаковых действий. Самый очевидный способ реализовать повторяющуюся функциональность — повторять строки кода:</div>
+		<pre class="javascript code-block code-block_theme_light">
+			<div class="code-block__tools">
+				<span class="code-block__clipboard">Скопировать код</span>
+				<span class="code-block__lang">JAVASCRIPT</span>
+			</div>
+			<code class="code-block__code javascript">
+				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>); 
+			</code>
+		</pre>
+		<div class="paragraph">Было бы классно не копировать один и тот же код, а сказать: «Исполни команду <code class="code-inline code-inline_theme_light">console.log</code> 5 раз». Хорошие новости: это возможно, в JavaScript есть цикл <code class="code-inline code-inline_theme_light">for</code>.</div><div class="paragraph">Цикл позволяет повторять похожие действия, задав условия повторения. Конструкция цикла похожа на конструкцию условия <code class="code-inline code-inline_theme_light">if</code>. Сначала идёт ключевое слово <code class="code-inline code-inline_theme_light">for</code>, потом круглые скобки, а затем фигурные. В фигурных скобках размещают код, который нужно повторять:</div>
+		<pre class="javascript code-block code-block_theme_light">
+			<div class="code-block__tools">
+				<span class="code-block__clipboard">Скопировать код</span>
+				<span class="code-block__lang">JAVASCRIPT</span>
+			</div>
+			<code class="code-block__code javascript"><span class="hljs-keyword">for</span> () {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+} </code></pre><div class="paragraph">А в круглых — три условия цикла, разделённых точкой с запятой. Во-первых, повторения нужно считать. Оттого первое условие — это начальное значение переменной-счётчика:</div><pre class="javascript code-block code-block_theme_light"><div class="code-block__tools"><span class="code-block__clipboard">Скопировать код</span><span class="code-block__lang">JAVASCRIPT</span></div><code class="code-block__code javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+} </code></pre><div class="paragraph">Переменная-счётчик отвечает за то, сколько раз будет выполняться код в фигурных скобках. Чтобы ограничить это количество, есть второе условие, оно задаёт конечное значение переменной:</div><pre class="javascript code-block code-block_theme_light"><div class="code-block__tools"><span class="code-block__clipboard">Скопировать код</span><span class="code-block__lang">JAVASCRIPT</span></div><code class="code-block__code javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">4</span>;) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+}
+<span class="hljs-comment">// повторяем текст о вечеринках не более 5 раз, считая от 0 до 4</span> </code></pre><div class="paragraph">Но от начального значения к конечному нужно как-то идти. Третье условие говорит о том, с каким шагом считать. Например, увеличивать счётчик на единицу:</div><pre class="javascript code-block code-block_theme_light"><div class="code-block__tools"><span class="code-block__clipboard">Скопировать код</span><span class="code-block__lang">JAVASCRIPT</span></div><code class="code-block__code javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">4</span>; i = i + <span class="hljs-number">1</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Никаких больше вечеринок'</span>);
+} </code></pre><div class="paragraph">Такой цикл выведет в консоль фразу «Никаких больше вечеринок» 5 раз.</div><div class="paragraph">Массивы хорошо подходят, чтобы перебирать их элементы в цикле. Такой код выведет в консоль все элементы массива <code class="code-inline code-inline_theme_light">array</code>, тем самым сосчитав до пяти:</div><pre class="javascript code-block code-block_theme_light"><div class="code-block__tools"><span class="code-block__clipboard">Скопировать код</span><span class="code-block__lang">JAVASCRIPT</span></div><code class="code-block__code javascript"><span class="hljs-keyword">let</span> array = [<span class="hljs-string">'животные'</span>, <span class="hljs-string">'растения'</span>, <span class="hljs-string">'грибы'</span>, <span class="hljs-string">'микроорганизмы'</span>, <span class="hljs-string">'вирусы'</span>];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">4</span>; i = i + <span class="hljs-number">1</span>) {
+  <span class="hljs-built_in">console</span>.log(array[i]);
+}
+<span class="hljs-comment">// животные</span>
+<span class="hljs-comment">// растения</span>
+<span class="hljs-comment">// грибы</span>
+<span class="hljs-comment">// микроорганизмы</span>
+<span class="hljs-comment">// вирусы</span> </code></pre><div class="paragraph">Переменная  <code class="code-inline code-inline_theme_light">i</code>, изменяясь в цикле, играет роль индекса, по которому можно поочерёдно достать каждый элемент.</div></div></section>	
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+<style>
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		min-height: 100vh;
+		font-family: sans-serif;
+		background: #111;
+	}
+	.btn{
+		position: relative;
+		display: inline-block;
+		margin: 10px;
+		padding: 10px 30px;
+		text-decoration: none;
+		color: #41f321;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		border: 2px solid #41f321;
+		transition: .5s;
+		overflow: hidden;
+	}
+	.btn:hover{
+		color: #111;
+	}
+	.btn span {
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		background: #41f321;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		transition: width .5s, height .5s;
+		z-index: -1;
+	}
+	.btn:hover span {
+		width: 300px;
+		height: 300px;
+	}
+</style>
+</head>
+<body>
+	<a class="btn" href="#"><span></span>Button</a>
+	<a class="btn" href="#"><span></span>Button</a>
+
+<script src="../3d-flip-clock/jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(e){
+	$('.btn').on('mouseenter', function(e){
+		x = e.pageX - $(this).offset().left;
+		y = e.pageY - $(this).offset().top;
+		$(this).find('span').css({top:y, left:x})
+	});
+	$('.btn').on('mouseout', function(e){
+		x = e.pageX - $(this).offset().left;
+		y = e.pageY - $(this).offset().top;
+		$(this).find('span').css({top:y, left:x})
+	});
+});
+</script>
+</body>
+</html>

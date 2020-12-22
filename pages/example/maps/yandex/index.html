@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.my-map {
+			width: 600px;
+			height: 400px;
+			margin: 100px auto 30px;
+		}
+		.ballon-body {
+			color: tomato;
+		}
+	</style>
+</head>
+<body>
+
+<div id="map" class="my-map"></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=a7f67a98-7be4-4138-a30b-b08512114264&lang=ru_RU" type="text/javascript"></script>
+
+<script type="text/javascript">
+ymaps.ready(init);
+function init(){
+    var myMap = new ymaps.Map("map", {
+        center: [55.46429, 37.54892],
+        zoom: 17
+    	}),
+
+        myPlacemark = new ymaps.Placemark([55.464295, 37.549596], {
+            balloonContentHeader: 'Это красивая метка',
+            balloonContentBody: '<img src="https://placehold.it/200x120" width="200" height="120"><br/><span class="ballon-body">Содержимое балуна</span>',
+            balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
+            hintContent: 'Собственный значок метки'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../Leaflet/pin.svg',
+            // Размеры метки.
+            iconImageSize: [38, 41],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-20, -40],
+        });
+
+    	myMap.geoObjects.add(myPlacemark);
+    	myPlacemark.balloon.open();
+}
+</script>
+
+</body>
+</html>

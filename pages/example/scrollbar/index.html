@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>-</title>
+<style type="text/css">
+	html {
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+}
+
+body {
+  background: #171414;
+  font-family: "Courier New", Courier, monospace;
+  color: #ffffff;
+  padding: 15% 15% 5%;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+p:first-of-type {
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 200px;
+  position: absolute;
+  top: -5%;
+  left: 15%;
+  opacity: 25%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, violet, red);
+  height: 0;
+  opacity: 0;
+}
+</style>
+</head>
+<body>
+<div id="progressBar"></div>
+<div id="progressBarContainer"></div>
+<h1>Welcome.</h1>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+  provident eveniet veritatis ipsa id consectetur ab tenetur dolores eaque.
+  Temporibus laboriosam cum corporis amet doloremque animi aut ipsa ea a?
+</p>
+
+<script type="text/javascript">
+const progressBar = document.querySelector("#progressBar");
+let totalPageHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = () => {
+  let newProgressHeight = (window.pageYOffset / totalPageHeight) * 100;
+  progressBar.style.height = `${newProgressHeight}%`;
+  progressBar.style.opacity = `${newProgressHeight}%`;
+};
+</script>
+</body>
+</html>

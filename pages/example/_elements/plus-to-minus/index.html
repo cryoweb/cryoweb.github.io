@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+.icon { height:60px; width:60px; }
+
+button { background:none; border:none; outline:none; }
+
+.vertical {
+  transform-origin:50% 50%;
+  transition:all 0.2s cubic-bezier(0.33, 0, 0.2, 1) 0s;
+}
+
+.toggle-open .vertical {
+  transform: rotate(90deg);
+  transition:all 0.2s cubic-bezier(0.33, 0, 0.2, 1) 0s;
+}
+</style>
+<body>
+<div class="section">
+  <button class="plus-minus" type="button">
+    <svg aria-hidden="true" class="icon icon--type-cog" width="16" height="16" role="img" version="1.1" viewBox="0 0 64 64">
+      <rect class="horizontal" y="28" width="64" height="8"/>
+      <rect class="vertical" x="28" width="8" height="64"/>
+    </svg>
+  </button>
+</div>
+<script src="../../3d-flip-clock/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(".plus-minus").click(function(){
+  $(".section").toggleClass("toggle-open");
+});
+</script>
+</body>
+</html>

@@ -29,7 +29,7 @@ html {
 body {
 	position: relative;
 	margin: 0;
-	font-family: Roboto, sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 	font-size: 18px;
 	line-height: 1.5;
 	color: #0a0a23;
@@ -70,7 +70,7 @@ input[type="radio"].v-h {
 .container {
 	max-width: 1170px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 100px 20px 0;
 }
 
 .title {
@@ -78,7 +78,7 @@ input[type="radio"].v-h {
 }
 
 /*Header*/
-.header{
+/*.header{
 	position: sticky;
 	width: 100%;
 	top: 0;
@@ -101,7 +101,7 @@ input[type="radio"].v-h {
 .logo span{
 	font-size: 28px;
 	color: var(--accent);
-}
+}*/
 
 li {
 	margin-bottom: 5px;

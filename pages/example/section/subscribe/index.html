@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    
+<div class="subscribe-wrapper">
+    <div class="subscribe">
+        
+        <form method="post" role="form">
+            <div class="subscribe-title">Подпишитесь</div>
+            <div class="subscribe-text">... и получите в подарок подборку «55 лучших ресурсов для изучения английского»</div>
+            <div class="subscribe-form">
+
+                <div class="inputs-wrapper">
+                    <div class="form-group">
+                        <div class="input_container">
+                            <input class="form-control" type="text" name="fname">
+                        </div>
+                        <label class="label">Имя*</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="input_container">
+                            <input class="form-control" type="email" name="email">
+                        </div>
+                        <label class="label">Email*</label>
+                    </div>
+                    <div class="btn-wrapper">
+                        <input class="subscribe-btn" type="submit" value="Подписаться">
+                    </div>
+                </div>
+
+                <div class="subscribers-count">58101 подписчик</div>
+                <div class="privacy-block">
+                    <span class="agreement-text">Нажимая «Подписаться», вы принимаете <a class="agreement-link" href="#" target="_blank">условия соглашения</a> </span>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+</div>
+
+<script>
+    const formControl = document.querySelector('.form-control');
+    const label = document.querySelector('.label');
+
+    formControl.addEventListener('focus', function() {
+       label.classList.add('active'); 
+    })
+
+</script>
+    
+</body>
+</html>

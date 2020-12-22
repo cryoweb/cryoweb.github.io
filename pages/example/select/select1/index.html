@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.block,
+.block select {
+  position: relative;
+  width: 300px;
+  font-family: 'Arial';
+  font-size: 12px;
+}
+
+.block .placeholder {
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+  top: 2px;
+  pointer-events: none;
+  background: #fff;
+}
+</style>
+<body>
+  
+<div class="block">
+  <div class="placeholder" data-text="Выбранная страна: "></div>
+  <select name="country">
+    <option>Россия</option>
+    <option>США</option>
+    <option>Турция</option>
+    <option>Китай</option>
+  </select>
+</div><br /><br />
+<div class="block">
+  <div class="placeholder" data-text="Выбранный тип аккаунта: "></div>
+  <select name="type">
+    <option>Бесплатный</option>
+    <option>Профессиональный</option>
+    <option>Для бизнеса</option>
+  </select>
+</div><br /><br />
+<div class="block">
+  <div class="placeholder" data-text="Выбранная валюта: "></div>
+  <select name="currency">
+    <option>USD</option>
+    <option>EUR</option>
+    <option>RUB</option>
+    <option>UAH</option>
+  </select>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+function selPlaceholder(block) {
+  var placeholder = block.find('.placeholder'),
+    select = block.find('select');
+  placeholder.text(placeholder.attr('data-text') + select.find('option:selected').text());
+}
+
+$('.block').each(function() {
+  selPlaceholder($(this));
+});
+
+$('.block select').on('change', function() {
+  selPlaceholder($(this).closest('.block'));
+});
+</script>
+
+<!--
+1. помещаем select в отдельный контейнер, например, .block;
+
+2. добавляем в .block еще один блок, например, .placeholder, в который будем выводить текст "Выбранная страна:" + текст выбранной option, и располагаем его поверх select;
+
+3. для .placeholder в css указываем pointer-events:none;, чтобы не припятствовать клику по select
+-->
+
+</body>
+</html>

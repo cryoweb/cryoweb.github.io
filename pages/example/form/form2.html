@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 0;
+  font-family: arial;
+}
+.form-group {
+    display: flex;    
+    margin: 0 -5px;
+}
+.form-group__label {
+    margin: 0 5px;
+    position: relative;
+}
+.form-group__input {          
+    height: 28px;   
+    border: 0;      
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+.form-group__input.is_changed + .form-group__placeholder {
+    transform: translateY(-150%) scale(.7);
+    opacity: 1;
+}
+.form-group__placeholder {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    transform-origin: bottom left;
+    opacity: .35;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <form action="#">
+        <div class="form-group">
+            <div class="form-group__label">
+                <input type="tel" class="form-group__input">
+                <span class="form-group__placeholder">Телефон</span>
+            </div>
+            <div class="form-group__label">
+                <input type="email" class="form-group__input">
+                <span class="form-group__placeholder">Email</span>
+            </div>
+        </div>
+    </form>
+
+</div>
+<script src="../3d-flip-clock/jquery-3.4.1.min.js"></script>
+<script>
+$('body').on('input blur', '.form-group__input', function(event) {
+    let $elem = $(this);
+    if ($elem.next('.form-group__placeholder').length > 0) {
+        if ($elem.val().length == 0) {
+            $elem.removeClass('is_changed');
+        } else {
+            $elem.addClass('is_changed');
+        }
+    }
+});
+$('body').on('focus', '.form-group__input', function(event) {
+    let $elem = $(this);
+    if ($elem.next('.form-group__placeholder').length > 0) {
+        $elem.addClass('is_changed');
+    }
+});
+</script> 
+</body>
+</html>

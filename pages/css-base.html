@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<article class="article">
+			<h2>CSS | Pointer-events</h2>
+			<p>Свойство <code>pointer-events</code> позволяет управлять тем, как элементы будут реагировать на события мыши или прикосновения к сенсорному экрану. Свойство позволяет контролировать когда, как и может ли вообще указатель устройства взаимодействовать с элементом.</p>
+			<p><code>pointer-events: none</code> предотвращает события указателя для элемента: <code>hover</code>, <code>active</code>, <code>click</code> и т.п., в том числе и JavaScript событие <code>click</code>.</p>
+			<p><code>pointer-events: auto</code> восстанавливает стандартное взаимодействие указателя с элементом.</p>
+			<p>Применение <code>pointer-events</code> на практике:</p>
+			<ul>
+				<li>Запретить пользователю клик правой кнопкой мыши по фото на сайте.</li>
+				<li>Выключить взаимодействие со страницей во время обработки ajax-запроса.</li>
+				<li>Блокировать любой элемент страницы от взаимодействия с курсором.</li>
+			</ul>
+		</article>
+	</div>
+</body>
+</html>

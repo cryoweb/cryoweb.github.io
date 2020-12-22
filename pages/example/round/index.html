@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>-</title>
+<style type="text/css">
+body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	background: linear-gradient(to bottom,#1e78bb 0%,#0a6ba3 100%);
+}
+.contract__round {
+	position: absolute;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 15px 52.5px 17.5px rgba(0,0,0,.06);
+	width: 95px;
+	height: 95px;
+	overflow: hidden;
+}
+
+.contract__round-text {
+	background-image: url(round-text.jpg);
+	width: 81px;
+	height: 85px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -40.5px;
+	margin-top: -42.5px;
+	animation-name: spin;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.contract__round-letter {
+	background-image: url(round-letter.jpg);
+	width: 21px;
+	height: 24px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -10.5px;
+	margin-top: -12.5px;
+}
+
+.contract__round-letter, .contract__round-text {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+</style>
+</head>
+<body>
+	<div class="contract__round">
+		<div class="contract__round-text"></div>
+		<div class="contract__round-letter"></div>
+	</div>
+</body>
+</html>

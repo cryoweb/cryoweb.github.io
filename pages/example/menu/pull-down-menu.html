@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+.menu {
+    position: fixed;
+    width: 320px;
+    left: -320px;
+    height: 100%;
+    background: #555;
+}
+.content {
+    padding: 20px;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 50px 0 0 0;
+}
+.menu ul li {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 45px;
+    padding: 3px 0 3px 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease ;
+    -ms-transition: all 0.3s ease ;
+    -o-transition: all 0.3s ease ;
+    transition: all 0.3s ease ;
+}
+.menu ul li:hover {
+    cursor: pointer;
+    padding-left: 30px;
+}
+.menu ul li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    background: #A82D3D;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease ;
+    -ms-transition: all 0.3s ease ;
+    -o-transition: all 0.3s ease ;
+    transition: all 0.3s ease ;
+}
+.menu ul li:hover:after {
+    width: 100%;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.icon-menu {
+    color: #333;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.icon-menu.active {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+    <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">О вас</a></li>
+        <li><a href="#">Магазин</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</div>
+<div class="content">
+    <div class="icon-menu">
+        Menu
+    </div>
+    Контент сайта
+</div>
+
+<script src="../countdown/jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('.icon-menu').click(function () {
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $('.menu').animate({
+                left: '-320px'
+            }, 200);
+            $('body').animate({
+                left: '0px'
+            }, 200);
+        } else {
+            $(this).addClass('active');
+            $('.menu').animate({
+                left: '0'
+            }, 200);
+            $('body').animate({
+                left: '320px'
+            }, 200);
+        }
+    })
+})
+</script>	
+</body>
+</html>

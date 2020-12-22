@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+<style>
+@font-face {
+    font-family: scl;
+    src: url(ico-scl/scl.woff2) format('woff2'),url(ico-scl/scl.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" ico__scl-"],[class^=ico__scl-] {
+    font-family: scl!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.ico__scl-pinterest:before {
+    content: "\e90b"
+}
+
+.ico__scl-vk:before {
+    content: "\e90a"
+}
+
+.ico__scl-fb:before {
+    content: "\e901"
+}
+
+.ico__scl-twi:before {
+    content: "\e909"
+}
+
+.ico__scl-gPlus:before {
+    content: "\e902"
+}
+
+.ico__scl-ok:before {
+    content: "\e905"
+}
+
+.ico__scl-mail:before {
+    content: "\e904"
+}
+
+.ico__scl-lj:before {
+    content: "\e903"
+}
+
+.ico__scl-lin:before {
+    content: "\e911"
+}
+
+.ico__scl-tumblr:before {
+    content: "\e915"
+}
+
+.ico__scl-vi:before,.ico__scl-viber:before {
+    content: "\e918"
+}
+
+.ico__scl-wa:before,.ico__scl-whatsapp:before {
+    content: "\e919"
+}
+
+.ico__scl-instagram:before {
+    content: "\e912"
+}
+
+.ico__scl-youtube:before {
+    content: "\e916"
+}
+
+.ico__scl-email:before {
+    content: "\e907"
+}
+
+.ico__scl-telegram:before {
+    content: "\e910"
+}
+
+.ico__scl-sms:before {
+    content: "\e913"
+}
+
+.ico__scl-spoiler:before {
+    content: "\e908"
+}
+
+.ico__scl-bookmarks:before {
+    content: "\e90c"
+}
+
+.ico__scl-print:before {
+    content: "\e906"
+}
+
+.ico__scl-heart:before {
+    content: "\e91a"
+}
+
+.ico__scl-heart-o:before {
+    content: "\e91b"
+}
+
+.ico__scl-like:before {
+    content: "\e92a"
+}
+
+.ico__scl-like-o:before {
+    content: "\e92b"
+}
+
+.ico__scl-slike:before {
+    content: "\e90d"
+}
+
+.ico__scl-up-arrow:before {
+    content: "\e90f"
+}
+
+.ico__scl-arrow:before {
+    content: "\e900"
+}
+
+.ico__scl-close:before {
+    content: "\e90e"
+}
+
+.ico__scl {
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff!important;
+    transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+    -o-transition: none;
+    cursor: pointer;
+    margin: 0
+}
+
+.ico__scl-lj {
+    background: #09C;
+    color: #fff
+}
+
+.ico__scl-lj:hover {
+    background: #00bfff
+}
+
+.ico__scl-twi {   
+    background: #55ACEE;
+    color: #fff
+}
+
+.ico__scl-twi:hover {
+    background: #83c3f3
+}
+
+.ico__scl-mail {
+    background: #168DE2;
+    color: #fff
+}
+
+.ico__scl-mail:hover {
+    background: #3fa4ec
+}
+
+.ico__scl-gPlus {
+    background: #DC4E41;
+    color: #fff
+}
+
+.ico__scl-gPlus:hover {
+    background: #e4766c
+}
+
+.ico__scl-vk {
+    background: #4D75A3;
+    color: #fff
+}
+
+.ico__scl-vk:hover {
+    background: #6a8fb9;
+}
+
+.ico__scl-pin {
+    background: #bd081c;
+    color: #fff
+}
+
+.ico__scl-pin:hover {
+    background: #ee0a23
+}
+
+.ico__scl-fb {
+    background: #3B5998;
+    color: #fff
+}
+
+.ico__scl-fb:hover {
+    background: #4c70ba
+}
+
+.ico__scl-ok {
+    background: #E67E17;
+    color: #fff
+}
+
+.ico__scl-ok:hover {
+    background: #ec9844
+}
+
+.ico__scl-pocet {
+    background: #d3505a;
+    color: #fff
+}
+
+.ico__scl-pocet:hover {
+    background: #dd7980
+}
+
+.ico__scl-lin {
+    background: #0077b5;
+    color: #fff
+}
+
+.ico__scl-lin:hover {
+    background: #0099e8
+}
+
+.ico__scl-pocket {
+    background: #ee4056;
+    color: #fff
+}
+
+.ico__scl-pocket:hover {
+    background: #f26f7f
+}
+
+.ico__scl-tumblr {
+    background: #304e6c;
+    color: #fff
+}
+
+.ico__scl-tumblr:hover {
+    background: #40678f
+}
+
+.ico__scl-pinterest {
+    background: #bd081c;
+    color: #fff
+}
+
+.ico__scl-pinterest:hover {
+    background: #ee0a23
+}
+
+.ico__scl-telegram {
+    background: #37AEE2;
+    color: #fff
+}
+
+.ico__scl-telegram:hover {
+    background: #64c0e8
+}
+
+.ico__scl-wa {
+    background: #25d366;
+    color: #fff
+}
+
+.ico__scl-wa:hover {
+    background: #4be083
+}
+
+.ico__scl-vi {
+    background: #8950a1;
+    color: #fff
+}
+
+.ico__scl-vi:hover {
+    background: #a16db7
+}
+
+.ico__scl-bookmarks {
+    background: #498bfa;
+    color: #fff
+}
+
+.ico__scl-bookmarks:hover {
+    background: #7babfb
+}
+
+.ico__scl-search {
+    background: #498bfa;
+    color: #fff
+}
+
+.ico__scl-search:hover {
+    background: #7babfb
+}
+
+.ico__scl-spoiler {
+    background: #498bfa;
+    color: #fff
+}
+
+.ico__scl-spoiler:hover {
+    background: #7babfb
+}
+
+.ico__scl-print {
+    background: #498bfa;
+    color: #fff
+}
+
+.ico__scl-print:hover {
+    background: #7babfb
+}
+
+.ico__scl-email {
+    background: #498bfa;
+    color: #fff
+}
+
+.ico__scl-email:hover {
+    background: #7babfb
+}
+
+.social__list {
+    margin: 0;
+    padding: 0;
+}
+.social__item {
+    list-style-type: none;
+}
+.social__link {
+    text-decoration: none;
+    color: inherit;
+}
+.ico__scl {
+    padding: 10px;
+    font-size: 20px;    
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="social">
+		<ul class="social__list">
+			<li class="social__item">
+				<a class="social__link" href="#"><span class="ico__scl ico__scl-vk"></span></a>
+			</li>
+			<li class="social__item">
+				<a class="social__link" href="#"><span class="ico__scl ico__scl-fb"></span></a>
+			</li>
+			<li class="social__item">
+				<a class="social__link" href="#"><span class="ico__scl ico__scl-ok"></span></a>
+			</li>
+			<li class="social__item">
+				<a class="social__link" href="#"><span class="ico__scl ico__scl-twi"></span></a>
+			</li>
+			<li class="social__item">
+				<a class="social__link" href="#"><span class="ico__scl ico__scl-telegram"></span></a>
+			</li>
+		</ul>
+	</div>
+</div>	
+</body>
+</html>

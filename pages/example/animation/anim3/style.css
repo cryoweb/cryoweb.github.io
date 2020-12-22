@@ -1,0 +1,175 @@
+:root {
+	--red: #ce003d;
+	--blue: #2e4bc6;
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+::selection {
+	background-color: #cd003d;
+	color: white;
+}
+
+img {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+.home_top_gradient {
+	background: linear-gradient(180deg, var(--red), var(--blue));
+	background-size: 400% 400%;
+	-webkit-animation: gradientFade 12s ease infinite;
+	-moz-animation: gradientFade 12s ease infinite;
+	animation: gradientFade 12s ease infinite;
+	height: 100vh;
+	width: 100vw;
+	display: table;
+	position: relative;
+}
+
+.inner_top_gradient {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100vh;
+	width: 100vw;
+}
+
+.top_container {
+	display: block;
+	margin: 0 auto;
+	width: 1100px;
+}
+
+.top_container h1 {
+	font-family: 'Montserrat';
+	font-size: 70px;
+	color: white;
+}
+
+.top_container h1 img {
+	padding-left: 5px;
+	width: 15px;
+}
+
+.top_container p {
+	font-family: 'Montserrat';
+	font-size: 20px;
+	height: 44px;
+	padding-top: 20px;
+	font-weight: 200;
+	color: white;
+}
+
+.top_buttons {
+	width: 350px;
+	display: block;
+	font-family: 'Montserrat';
+	font-size: 14px;
+	padding-top: 30px;
+}
+
+.top_buttons a {
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.top_buttons .top_left_button {
+	width: 150px;
+	padding: 15px 0;
+	text-align: center;
+	display: inline-block;
+	background-color: transparent;
+	color: white;
+	border: solid 4px white;
+}
+
+.home_top_gradient .arrows {
+	position: absolute;
+	bottom: 0;
+	pointer-events: none;
+	right: 0;
+	height: 80vh;
+}
+
+.top_buttons .top_right_button {
+	width: 150px;
+	padding: 15px 0;
+	text-align: center;
+	display: inline-block;
+	background-color: white;
+	color: black;
+	border: solid 4px white;
+	float: right;
+}
+
+@-webkit-keyframes gradientFade {
+	0%{background-position:47% 0%}
+	50%{background-position:54% 100%}
+	100%{background-position:47% 0%}
+}
+@-moz-keyframes gradientFade {
+	0%{background-position:47% 0%}
+	50%{background-position:54% 100%}
+	100%{background-position:47% 0%}
+}
+@keyframes gradientFade { 
+	0%{background-position:47% 0%}
+	50%{background-position:54% 100%}
+	100%{background-position:47% 0%}
+}
+
+@media(max-width: 600px){
+
+	.top_buttons{
+		width: 100%;
+	}
+
+	.top_buttons a{
+		width: calc(50% - 10px) !important;
+		margin-right: 10px;
+		box-sizing: border-box;
+	}
+
+	.top_buttons a:last-of-type{
+		margin-right: 0;
+	}
+
+	.top_container{
+		width: 90% !important;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.top_container h1{
+		font-size: 40px;
+		line-height: 50px;
+		text-align: left;
+	}
+
+	.top_container p{
+		text-align: left;
+	}
+
+	.top_container h1 br{
+		display: none;
+	}
+
+	.home_top_gradient .arrows{
+		display: none;
+	}
+
+	}

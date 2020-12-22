@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid">
+  <div class="col">
+    <p>Два изображения</p>
+    <div class="product">
+      <div class="product__images product__images--two">
+        <div class="product__image">
+          <img src="https://image.freepik.com/free-photo/3d-man-walking-crutches_1401-32.jpg">
+        </div>
+        <div class="product__image">
+          <img src="https://image.freepik.com/free-photo/construction-worker-builder-crutches_1401-33.jpg" alt="">
+        </div>
+      </div>
+      <div class="product__content">
+        <div class="product__title">Карточка товара</div>
+        <div class="product__price">цена</div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <p>Несколько изображений</p>
+    <div class="product">
+      <div class="product__images product__images--few">
+        <div class="product__image is_active" data-index="1">
+          <img src="https://image.freepik.com/free-photo/3d-man-walking-crutches_1401-32.jpg">
+        </div>
+        <div class="product__image" data-index="2">
+          <img src="https://image.freepik.com/free-photo/worker-with-pipe-wrench_1401-2.jpg" alt="">
+        </div>
+        <div class="product__image" data-index="3">
+          <img src="https://image.freepik.com/free-photo/builder-with-drill_1401-1.jpg" alt="">
+        </div>
+        <div class="product__image" data-index="4">
+          <img src="https://image.freepik.com/free-photo/construction-worker-builder-crutches_1401-33.jpg" alt="">
+        </div>
+        <div class="product__img-bullets">
+          <div class="product__img-bullet is_active" data-index="1"></div>
+          <div class="product__img-bullet" data-index="2"></div>
+          <div class="product__img-bullet" data-index="3"></div>
+          <div class="product__img-bullet" data-index="4"></div>
+        </div>
+        <div class="product__img-togglers">
+          <div class="product__img-toggler is_active" data-index="1"></div>
+          <div class="product__img-toggler" data-index="2"></div>
+          <div class="product__img-toggler" data-index="3"></div>
+          <div class="product__img-toggler" data-index="4"></div>
+        </div>
+      </div>
+      <div class="product__content">
+        <div class="product__title">Карточка товара</div>
+        <div class="product__price">цена</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>	
+</body>
+</html>
